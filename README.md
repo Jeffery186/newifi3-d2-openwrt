@@ -10,6 +10,9 @@
  
  插件截图预览：
  ![截图预览](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/ee96c5.png)
+
  ![截图预览](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/20ae82.png)
+
  ![截图预览](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/87307a.png)
+ 
  ![截图预览](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/4cfa99.png)
