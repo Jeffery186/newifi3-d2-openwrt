@@ -1,0 +1,929 @@
+Package: acme
+Version: 2.8.5-3
+Depends: libc, wget-ssl, ca-bundle, openssl-util, socat
+License: GPL-3.0-only
+Section: net
+Architecture: all
+Installed-Size: 47194
+Filename: acme_2.8.5-3_all.ipk
+Size: 48090
+SHA256sum: 0425b74d67e1d00ab7e52361ae9d050332966f526cdada80945a379254155e00
+Description:  A client for issuing Letsencrypt certificates.
+
+Package: adblock
+Version: 4.0.6-1
+Depends: libc, jshn, jsonfilter, coreutils, coreutils-sort, ca-bundle, opkg
+License: GPL-3.0-or-later
+Section: net
+Architecture: all
+Installed-Size: 18008
+Filename: adblock_4.0.6-1_all.ipk
+Size: 18999
+SHA256sum: 82e695a02cdd09e165d4c998f0565a268280e76625c408dd41dcfb98fcee9716
+Description:  Powerful adblock script to block ad/abuse domains via dnsmasq, unbound, named or kresd.
+ The script supports many domain blacklist sites plus manual black- and whitelist overrides.
+ Please see https://github.com/openwrt/packages/blob/master/net/adblock/files/README.md for further information.
+ 
+
+Package: aria2
+Version: 1.35.0-2
+Depends: libc, zlib, libstdcpp6, libopenssl1.1
+License: GPLv2
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 525412
+Filename: aria2_1.35.0-2_mipsel_24kc.ipk
+Size: 525369
+SHA256sum: e5298c68810c5c5c60d3a93708d7c87751bbefdcedadde987233971b66d0abc3
+Description:  aria2 is a lightweight multi-protocol & multi-source command-line download
+ utility
+
+Package: boost-chrono
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt, boost-system
+License: BSL-1.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 13745
+Filename: boost-chrono_1.71.0-6_mipsel_24kc.ipk
+Size: 14530
+SHA256sum: 748a619c5b74f168e7a65b032241609b9b2eb08e032eafe1a875cb0409191a52
+Description:  This package contains the Boost chrono library.
+
+Package: boost-random
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt, boost-system
+License: BSL-1.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 12441
+Filename: boost-random_1.71.0-6_mipsel_24kc.ipk
+Size: 13206
+SHA256sum: 46c4350e489e25e3a4534157a250d8d3a9aaca881f3aa42f1d370305868904fa
+Description:  This package contains the Boost random library.
+
+Package: boost-system
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+License: BSL-1.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 1098
+Filename: boost-system_1.71.0-6_mipsel_24kc.ipk
+Size: 1884
+SHA256sum: 8dc9255606f7bf0ffb71ba6eb04992b621851eab89bdf660814bb97ca52e4194
+Description:  This package contains the Boost system library.
+
+Package: boost
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+License: BSL-1.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 105
+Filename: boost_1.71.0-6_mipsel_24kc.ipk
+Size: 1242
+SHA256sum: 30989d6853ebfbba314d95e6b8916b5029cd739eb8e05a8ce596d5aabf881596
+Description:  This package provides the Boost v1.71.0 libraries.
+ Boost is a set of free, peer-reviewed, portable C++ source libraries.
+ 
+ This package provides the following run-time libraries:
+ - atomic
+ - chrono
+ - container
+ - context
+ - contract
+ - coroutine and coroutine2 (Coroutine is deprecated - use Coroutine2)
+ - date_time
+ - exception
+ - filesystem
+ - fiber
+ - graph
+ - - graph-parallel
+ - iostreams
+ - locale (Requires kernel being compiled with full language support)
+ - log
+ - math
+ - program_options
+ - python
+ - python3
+ - random
+ - regex
+ - serialization and wserialization
+ - stackstrace
+ - system
+ - thread
+ - timer
+ - type_erasure
+ - wave
+ 
+ There are many more header-only libraries supported by Boost.
+ See more at http://www.boost.org/doc/libs/1_71_0/
+
+Package: coreutils-base64
+Version: 8.30-2
+Depends: libc, coreutils
+Alternatives: 300:/bin/base64:/usr/bin/gnu-base64
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 18285
+Filename: coreutils-base64_8.30-2_mipsel_24kc.ipk
+Size: 19041
+SHA256sum: abb41251af8030b431297f90e6807bd1a831bb57acca22633c5764d475a72bfa
+Description:  Full version of standard GNU base64 utility.
+
+Package: coreutils-nohup
+Version: 8.30-2
+Depends: libc, coreutils
+Alternatives: 300:/usr/bin/nohup:/usr/bin/gnu-nohup
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 16300
+Filename: coreutils-nohup_8.30-2_mipsel_24kc.ipk
+Size: 17008
+SHA256sum: 18e3a2f562a2e6ac313839e090648e786aaf223845361a4323c3a1f25d042d85
+Description:  Full version of standard GNU nohup utility.
+
+Package: coreutils-sort
+Version: 8.30-2
+Depends: libc, coreutils, libpthread
+Alternatives: 300:/usr/bin/sort:/usr/bin/gnu-sort
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 42498
+Filename: coreutils-sort_8.30-2_mipsel_24kc.ipk
+Size: 43322
+SHA256sum: cf76609296e2513d27f47a07f8e0a5118796867b39767a43656060bdfce1cb59
+Description:  Full version of standard GNU sort utility.
+
+Package: coreutils
+Version: 8.30-2
+Depends: libc
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 105
+Filename: coreutils_8.30-2_mipsel_24kc.ipk
+Size: 925
+SHA256sum: 4ed3280a66510722be3378d94d3dabc99d03b04f648c8b06a4ff0f5b49194bbd
+Description:  Full versions of standard GNU utilities. If an equivalent Busybox applet is
+ available, you should consider compiling that instead as Busybox applets are
+ usually smaller, at the expense of reduced functionality.
+
+Package: ddns-scripts
+Version: 2.7.8-13
+License: GPL-2.0
+Section: net
+Architecture: all
+Installed-Size: 15009
+Filename: ddns-scripts_2.7.8-13_all.ipk
+Size: 16085
+SHA256sum: 21af6a7ad34e1f878cf1b562b5ab36025d1bcb48eac9861edb8ded090b30af4b
+Description:  Dynamic DNS Client scripts (with IPv6 support) - Info: https://openwrt.org/docs/guide-user/services/ddns/client
+
+Package: etherwake
+Version: 1.09-4
+Depends: libc
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 4874
+Filename: etherwake_1.09-4_mipsel_24kc.ipk
+Size: 5793
+SHA256sum: 0f0324636eaca8f43fe05e497e472f3be6f956683bea40e84c2c4e22f66ae81f
+Description:  You can wake up WOL compliant Computers which have been powered down to
+ sleep mode or start WOL compliant Computers with a BIOS feature.
+ WOL is an abbreviation for Wake-on-LAN. It is a standard that allows you
+ to turn on a computer from another location over a network connection.
+ ether-wake also supports WOL passwords.
+
+Package: haproxy
+Version: 2.0.15-1
+Depends: libc, libpcre, libltdl7, zlib, libpthread, libopenssl1.1, libncurses6, libreadline8, libatomic1
+License: GPL-2.0-only
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 679355
+Filename: haproxy_2.0.15-1_mipsel_24kc.ipk
+Size: 679958
+SHA256sum: 25479cc7cfe17da7094bd37bc47a97da2a6f95437ed4a61620ee4a28b104f1e6
+Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
+ This package is built with SSL and LUA support.
+
+Package: icu
+Version: 66.1-1
+Depends: libc, libstdcpp6, libpthread
+License: ICU
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 1711482
+Filename: icu_66.1-1_mipsel_24kc.ipk
+Size: 1699761
+SHA256sum: 0209b3747ea92751dacb19a5578b4fba191488a571b55058f1eac63d2b2858aa
+Description:  ICU is a mature, widely used set of C/C++ and Java libraries providing Unicode and Globalization support for software applications. ICU is widely portable and gives applications the same results on all platforms and between C/C++ and Java software.
+ This package supports C/C++.
+
+Package: libdb47
+Version: 4.7.25.4.NC-5
+Depends: libc, libxml2
+Provides: libdb47-full
+License: Sleepycat
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 464880
+Filename: libdb47_4.7.25.4.NC-5_mipsel_24kc.ipk
+Size: 465536
+SHA256sum: 15a9839fe248ba14d53c391a4387c0b0b8629d7ed3fbb7b77a00bedf70c5fd1f
+Description:  Berkeley DB library (4.7).
+
+Package: libdouble-conversion
+Version: 3.1.5-2
+Depends: libc, libstdcpp6
+License: BSD-3c
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 24051
+Filename: libdouble-conversion_3.1.5-2_mipsel_24kc.ipk
+Size: 24932
+SHA256sum: 5758bcec03b7592d49a77a2e48f6644f6f4e5611da11371c1214ac2c44a9fec3
+Description:  double-conversion provides binary-decimal and decimal-binary routines for IEEE doubles.
+ 
+ The library consists of efficient conversion routines that have been extracted
+ from the V8 JavaScript engine. The code has been refactored and improved so that
+ it can be used more easily in other projects.
+
+Package: libexpat
+Version: 2.2.9-1
+Depends: libc
+License: MIT
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 46958
+Filename: libexpat_2.2.9-1_mipsel_24kc.ipk
+Size: 47714
+SHA256sum: 01ec7f11a8deb2e58b99b3f0359cec67aed5c049cc32cd96abe69d332c8fa766
+Description:  A fast, non-validating, stream-oriented XML parsing library.
+
+Package: libffi
+Version: 3.2.1-3
+Depends: libc
+License: MIT
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 5290
+Filename: libffi_3.2.1-3_mipsel_24kc.ipk
+Size: 6301
+SHA256sum: d4a27400fa7510c9a4fe0bf42a3e3c29bc07444791ee4071b7d80db959f73846
+Description:  The libffi library provides a portable, high level programming interface to
+ various calling conventions. This allows a programmer to call any function
+ specified by a call interface description at run-time.
+ 
+ FFI stands for Foreign Function Interface. A foreign function interface is the
+ popular name for the interface that allows code written in one language to call
+ code written in another language. The libffi library really only provides the
+ lowest, machine dependent layer of a fully featured foreign function interface.
+ A layer must exist above libffi that handles type conversions for values passed
+ between the two languages.
+
+Package: libgdbm
+Version: 1.11-1
+Depends: libc
+License: GPL-3.0+
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 15287
+Filename: libgdbm_1.11-1_mipsel_24kc.ipk
+Size: 16054
+SHA256sum: 34a0b55ec57db098562d5c5ef5989da566354ccbfc07350af25d35703f77a4ea
+Description:  GNU database manager library
+ GNU dbm is a set of database routines that use extendible hashing and
+ works similar to the standard UNIX dbm routines.
+
+Package: libhttp-parser
+Version: 2.9.2-1
+Depends: libc
+License: MIT
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 15154
+Filename: libhttp-parser_2.9.2-1_mipsel_24kc.ipk
+Size: 16151
+SHA256sum: 585df5306a5c5b8757ba9180de5964f85624e71e64fffc4c64f30d7aa196bb19
+Description:  A parser for HTTP messages written in C. It parses both requests and responses.
+ The parser is designed to be used in performance HTTP applications.
+ It does not make any syscalls nor allocations, it does not buffer data,
+ it can be interrupted at anytime. Depending on your architecture,
+ it only requires about 40 bytes of data per message stream
+ (in a web server that is per connection).
+
+Package: liblzma
+Version: 5.2.4-5
+Depends: libc, libpthread
+License: Public-Domain LGPL-2.1-or-later GPL-2.0-or-later GPL-3.0-or-later
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 48691
+Filename: liblzma_5.2.4-5_mipsel_24kc.ipk
+Size: 49550
+SHA256sum: 2715b697615e8ae24baade2ee845983b68dd491e499aa5a0e1f65b35b5721855
+Description:  liblzma library from XZ Utils
+
+Package: libminiupnpc
+Version: 2.1.20190408-2
+Depends: libc
+License: BSD-3c
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 18273
+Filename: libminiupnpc_2.1.20190408-2_mipsel_24kc.ipk
+Size: 19072
+SHA256sum: 0bb87716be878a3c02aae1e6e30b05538c7f2cc20025d4ee20a641590057eeb2
+Description:  Lightweight UPnP library
+
+Package: libnatpmp
+Version: 20150609-1
+Depends: libc
+License: BSD-3c
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 3102
+Filename: libnatpmp_20150609-1_mipsel_24kc.ipk
+Size: 4037
+SHA256sum: 67ec5b713a431a4718e11b6ccc2152e02e6b9a6de62502d92dc739378b0cd42e
+Description:  libnatpmp is an attempt to make a portable and fully compliant implementation
+ of the protocol for the client side. It is based on non blocking sockets and
+ all calls of the API are asynchronous. It is therefore very easy to integrate
+ the NAT-PMP code to any event driven code.
+ This package contains the shared library.
+
+Package: libpcre2-16
+Version: 10.32-1
+Depends: libc
+License: BSD-3-Clause
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 84571
+Filename: libpcre2-16_10.32-1_mipsel_24kc.ipk
+Size: 85421
+SHA256sum: 7eb9e45effb0ea8bec60346cbe671f67c67b51a4e856e7332474ce4aa56d43c6
+Description:  A Perl Compatible Regular Expression library (16bit support)
+
+Package: libpcre
+Version: 8.43-1
+Depends: libc
+License: BSD-3-Clause
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 80272
+Filename: libpcre_8.43-1_mipsel_24kc.ipk
+Size: 81145
+SHA256sum: e5a08d6cc642430c9f5285e9a2681054e41165d6f6906b665eb90adc91f6ecc4
+Description:  A Perl Compatible Regular Expression library
+
+Package: libpng
+Version: 1.6.37-3
+Depends: libc, zlib
+License: Libpng GPL-2.0-or-later BSD-3-Clause
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 81381
+Filename: libpng_1.6.37-3_mipsel_24kc.ipk
+Size: 82244
+SHA256sum: 22a60056a9b70dd3caedc5a3f00b0e645960cc0f1b21fb216f12ade8a46f071a
+Description:  A PNG format files handling library
+
+Package: libsqlite3-0
+Version: 3310100-1
+Depends: libc, libpthread, zlib
+Provides: libsqlite3
+License: PUBLICDOMAIN
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 464005
+Filename: libsqlite3-0_3310100-1_mipsel_24kc.ipk
+Size: 464547
+SHA256sum: 1439317a80044a429af9385838841248278d31e3fda775f68f91c32cef0e7419
+Description:  SQLite is a small C library that implements a self-contained, embeddable,
+ zero-configuration SQL database engine.
+ This package contains the SQLite (v3.x) shared library, used by other
+ programs.
+
+Package: libtins
+Version: 4.0-3
+Depends: libc, libstdcpp6, libpcap1
+License: BSD-2-Clause
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 181883
+Filename: libtins_4.0-3_mipsel_24kc.ipk
+Size: 181835
+SHA256sum: 2a6f10168a550a4147ff3bd23b72e3d3f32fd68fdaad567de3b9eb79bf91ae87
+Description:  libtins is a high-level, multiplatform C++ network packet sniffing and crafting library.
+
+Package: libupnp
+Version: 1.8.7-2
+Depends: libc, libpthread
+License: BSD-3-Clause
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 82022
+Filename: libupnp_1.8.7-2_mipsel_24kc.ipk
+Size: 82971
+SHA256sum: 3a717af94c3d2cb38081e42b410cb27de07e0fbb3e2732ab07cc79472e61cd84
+Description:  The portable SDK for UPnP Devices (libupnp) provides developers with an API and
+ open source code for building control points, devices, and bridges that are
+ compliant with Version 1.0 of the  Universal Plug and Play Device Architecture
+ Specification.
+
+Package: libuv1
+Version: 1.34.2-1
+Depends: libc, libpthread, librt
+Provides: libuv
+License: MIT
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 52382
+Filename: libuv1_1.34.2-1_mipsel_24kc.ipk
+Size: 53175
+SHA256sum: f554e59b28fb888dac44966c20d378d5aa21eda1efce877e4a7e7199b76cb672
+Description:  libuv is a multi-platform support library with a focus on asynchronous I/O. It
+ was primarily developed for use by Node.js, but it's also used by Luvit, Julia,
+ pyuv, and others.
+
+Package: libxml2
+Version: 2.9.9-2
+Depends: libc, libpthread, zlib
+License: MIT
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 430752
+Filename: libxml2_2.9.9-2_mipsel_24kc.ipk
+Size: 428540
+SHA256sum: c4ffb953e23e64af183e29abb3fcfd24f956ac94a5ef9cf468ca9f80e1289a2a
+Description:  A library for manipulating XML and HTML resources.
+
+Package: libyaml-cpp0.6
+Version: 0.6.3-1
+Depends: libc, libstdcpp6
+Provides: libyaml-cpp
+License: MIT
+Section: development
+Architecture: mipsel_24kc
+Installed-Size: 79336
+Filename: libyaml-cpp0.6_0.6.3-1_mipsel_24kc.ipk
+Size: 80095
+SHA256sum: 9bd0bde9a1e82d4b5c7174865bf6a8a9889f341822fd94a11ef9392c9fd3b217
+Description:  yaml-cpp is a YAML parser and emitter in C++ matching the YAML 1.2 spec.
+
+Package: libzstd
+Version: 1.4.4-2
+Depends: libc
+License: GPL-2.0-or-later
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 256937
+Filename: libzstd_1.4.4-2_mipsel_24kc.ipk
+Size: 257747
+SHA256sum: 46a216ff7869cabd2525e3ac2b87e35612736c4ab0869a8c7a749b6882e000d6
+Description:  Zstandard - Fast real-time compression algorithm.
+ This package provides libzstd library.
+
+Package: luci-app-acme
+Version: 2.8.5-3
+Depends: libc, lua, luci-base, luci-compat, acme
+License: GPL-3.0-only
+Section: luci
+Architecture: all
+Installed-Size: 2388
+Filename: luci-app-acme_2.8.5-3_all.ipk
+Size: 3328
+SHA256sum: 3f85bbae806976a3733471b1cd1ac95258eb01c1611d5bf3917b39e8db2f9082
+Description:  Control the ACME Letsencrypt certificate interface
+
+Package: noddos
+Version: 0.5.5-3
+Depends: libc, libstdcpp6, libnetfilter-conntrack3, libcurl4, libopenssl1.1, openssl-util, ca-bundle, ca-certificates, wget, bzip2, libtins, ipset, libpthread, libyaml-cpp0.6
+License: GPLv3
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 165955
+Filename: noddos_0.5.5-3_mipsel_24kc.ipk
+Size: 167081
+SHA256sum: d677fe6c3bf233c99c07a007849eb9c6bea63808649c5bccdbf7f6120a3ac382
+Description:  Noddos discovers what devices you have in your network and tailors the firewall rules based on whitelisted flows for that device. Noddos downloads the firewall rules periodically from the cloud. In order to support creating these firewall rules, noddos can, after opt-in, upload anonimized traffic statistics for each device to the cloud. The Luci interface is available in the luci-apps-noddos package. For information, visit https://www.noddos.io/
+
+Package: node
+Version: v8.16.1-1
+Depends: libc, libstdcpp6, libopenssl1.1, zlib, libnghttp2-14, libuv1, libhttp-parser
+License: MIT
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 4401699
+Filename: node_v8.16.1-1_mipsel_24kc.ipk
+Size: 4384352
+SHA256sum: 048bb9966d7bda9767c8a85daf7214c578d5f129237ff5d5e080db7db7691e6f
+Description:  Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses
+ an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js'
+ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+
+Package: p910nd
+Version: 0.97-8
+Depends: libc
+License: GPLv2
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 6011
+Filename: p910nd_0.97-8_mipsel_24kc.ipk
+Size: 6969
+SHA256sum: ab0412245d0333d67d6e064334f4551f29c3876dd5636838a1781d3b3722dfb8
+Description:  p910nd is a small daemon that copies any data received on
+ the port it is listening on to the corresponding printer
+ port. It is primarily intended for diskless Linux hosts
+ running as printer drivers but there is no reason why it
+ could not be used on diskful hosts. Port 9100 is copied
+ to /dev/lp0, 9101 to /dev/lp1 and 9102 to /dev/lp2. The
+ default is port 9100 to /dev/lp0.
+
+Package: python3-asyncio
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 126333
+Filename: python3-asyncio_3.7.8-2_mipsel_24kc.ipk
+Size: 127263
+SHA256sum: f193e6030f5a999e0387827a97a877cb52f3dcb8daf115d5810559f521af11ef
+Description:  Python 3.7 asyncio module
+
+Package: python3-base
+Version: 3.7.8-2
+Depends: libc, libpthread, zlib
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 1209394
+Filename: python3-base_3.7.8-2_mipsel_24kc.ipk
+Size: 1202695
+SHA256sum: 93abbfd95cf347420b907f520cc9be872a0ad670041e57b571a9bfb9cc952d7a
+Description:  This package contains only the interpreter and the bare minimum
+ for the interpreter to start.
+
+Package: python3-cgi
+Version: 3.7.8-2
+Depends: libc, python3-light, python3-email
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 12330
+Filename: python3-cgi_3.7.8-2_mipsel_24kc.ipk
+Size: 13169
+SHA256sum: fb98093d0d8de5ffd2e65ce4bb2eff45b4be82fe186fb894fdd116ac3f97c8b2
+Description:  Python 3.7 cgi module
+
+Package: python3-cgitb
+Version: 3.7.8-2
+Depends: libc, python3-light, python3-cgi, python3-pydoc
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 5461
+Filename: python3-cgitb_3.7.8-2_mipsel_24kc.ipk
+Size: 6302
+SHA256sum: 3d94f5f42542e26e6f9bae35973c9cf77fafb2efb178d002bc60970dccffb676
+Description:  Python 3.7 cgitb module
+
+Package: python3-codecs
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 750866
+Filename: python3-codecs_3.7.8-2_mipsel_24kc.ipk
+Size: 727107
+SHA256sum: 2719a2e4ee49651e2168c92420e40d2d66e7f48c0f0a3a73488cff29602d62e5
+Description:  Python 3.7 codecs + unicode support
+
+Package: python3-ctypes
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 67130
+Filename: python3-ctypes_3.7.8-2_mipsel_24kc.ipk
+Size: 68040
+SHA256sum: dea54c7b14b4902f5a452d516483500dac64faefa0da499a332d7f1e4f539dd2
+Description:  Python 3.7 ctypes module
+
+Package: python3-dbm
+Version: 3.7.8-2
+Depends: libc, python3-light, libdb47
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 10440
+Filename: python3-dbm_3.7.8-2_mipsel_24kc.ipk
+Size: 11278
+SHA256sum: 1a3a209e111918f383797f44ffda1349f8c5a44472adf9a391d7e1678537884b
+Description:  Python 3.7 dbm module
+
+Package: python3-decimal
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 86775
+Filename: python3-decimal_3.7.8-2_mipsel_24kc.ipk
+Size: 87386
+SHA256sum: d22c48c6414ec90565428b253a531fe20b4e3fafabdad5922c9608ea34c1ca8c
+Description:  Python 3.7 decimal module
+
+Package: python3-distutils
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 175181
+Filename: python3-distutils_3.7.8-2_mipsel_24kc.ipk
+Size: 176109
+SHA256sum: 78d80ba831b0a4d93dad2baa3f6179f7d74f8b5989f3e3f1a2c86c07f99a541b
+Description:  Python 3.7 distutils module
+
+Package: python3-email
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 111526
+Filename: python3-email_3.7.8-2_mipsel_24kc.ipk
+Size: 112495
+SHA256sum: 78e738e384cd1652fa0c1db932cd6148cd411f159f9620e823ac009d9c723ed2
+Description:  Python 3.7 email module
+
+Package: python3-gdbm
+Version: 3.7.8-2
+Depends: libc, python3-light, libgdbm
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 6288
+Filename: python3-gdbm_3.7.8-2_mipsel_24kc.ipk
+Size: 7158
+SHA256sum: 829d642e36be4aa87c328805cc4ec403ee97fd4a806ab0783704af09836c28ec
+Description:  Python 3.7 gdbm module
+
+Package: python3-light
+Version: 3.7.8-2
+Depends: libc, python3-base, libffi, libbz2-1.0, libuuid1
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 1710887
+Filename: python3-light_3.7.8-2_mipsel_24kc.ipk
+Size: 1710906
+SHA256sum: ec0c87af2c5063ee5a05171e01c15f1f2275413de1158d7d22d4e51591b0941b
+Description:  This package is essentially the python3-base package plus
+ a few of the rarely used (and big) libraries stripped out
+ into separate packages.
+
+Package: python3-logging
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 50066
+Filename: python3-logging_3.7.8-2_mipsel_24kc.ipk
+Size: 51013
+SHA256sum: 321b303d400ce1eca2a7ab77219d3941d91aab877b7bab66d337977f30778fab
+Description:  Python 3.7 logging module
+
+Package: python3-lzma
+Version: 3.7.8-2
+Depends: libc, python3-light, liblzma
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 15605
+Filename: python3-lzma_3.7.8-2_mipsel_24kc.ipk
+Size: 16420
+SHA256sum: 103726bfca100e029794e22294896a736003c8ba55698c54b9b586d24e1547f2
+Description:  Python 3.7 lzma module
+
+Package: python3-multiprocessing
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 85764
+Filename: python3-multiprocessing_3.7.8-2_mipsel_24kc.ipk
+Size: 86708
+SHA256sum: 21dc93347173e53c3435061161c0ca86481b7e3e45f5c4d5ae4fea23eaaa61ab
+Description:  Python 3.7 multiprocessing
+
+Package: python3-ncurses
+Version: 3.7.8-2
+Depends: libc, python3-light, libncurses6
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 31486
+Filename: python3-ncurses_3.7.8-2_mipsel_24kc.ipk
+Size: 32070
+SHA256sum: 6578c739be121a2edb9daa026ab72d9c60e604a3db65bf1503a7a2837d023c83
+Description:  Python 3.7 ncurses module
+
+Package: python3-openssl
+Version: 3.7.8-2
+Depends: libc, python3-light, libopenssl1.1, ca-certs
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 43450
+Filename: python3-openssl_3.7.8-2_mipsel_24kc.ipk
+Size: 44057
+SHA256sum: 127387be1437ed3610e17f90c1d69ed8c0963514f178d0429728da0e5092b9df
+Description:  Python 3.7 SSL module
+
+Package: python3-pydoc
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 186728
+Filename: python3-pydoc_3.7.8-2_mipsel_24kc.ipk
+Size: 187697
+SHA256sum: 6f33cb27e2f9b15cebf51b20a7012f8769e2eb0a26af16a36b60c265c05323db
+Description:  Python 3.7 pydoc module
+
+Package: python3-sqlite3
+Version: 3.7.8-2
+Depends: libc, python3-light, libsqlite3-0
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 26333
+Filename: python3-sqlite3_3.7.8-2_mipsel_24kc.ipk
+Size: 27115
+SHA256sum: fe9ab37650ee503eefb4a975fe574985663c15256428085a485ae1acb1779118
+Description:  Python 3.7 sqlite3 module
+
+Package: python3-unittest
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 68101
+Filename: python3-unittest_3.7.8-2_mipsel_24kc.ipk
+Size: 69074
+SHA256sum: 77dfc83e1693c4e697ad4b4571df1ac75fa23a8fda2e2e4fcc3f580e5816bc39
+Description:  Python 3.7 unittest module
+
+Package: python3-urllib
+Version: 3.7.8-2
+Depends: libc, python3-light, python3-email
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 49543
+Filename: python3-urllib_3.7.8-2_mipsel_24kc.ipk
+Size: 50499
+SHA256sum: 4fc5b1dec8d132814ef8a657bc6df6876b7a4ff58e2b5a3aafe9b8a292204763
+Description:  Python 3.7 URL library module
+
+Package: python3-xml
+Version: 3.7.8-2
+Depends: libc, python3-light
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 193985
+Filename: python3-xml_3.7.8-2_mipsel_24kc.ipk
+Size: 194784
+SHA256sum: 2d800237720c5e0ffbdd957e950c17e4acafded33462e1c0ac8386aed093448f
+Description:  Python 3.7 xml libs
+
+Package: python3
+Version: 3.7.8-2
+Depends: libc, python3-light, python3-unittest, python3-ncurses, python3-ctypes, python3-pydoc, python3-logging, python3-multiprocessing, python3-urllib, python3-xml, python3-sqlite3, python3-gdbm, python3-distutils, python3-email, python3-openssl, python3-cgi, python3-cgitb, python3-dbm, python3-codecs, python3-asyncio, python3-lzma, python3-decimal
+License: Python/2.0
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 105
+Filename: python3_3.7.8-2_mipsel_24kc.ipk
+Size: 1086
+SHA256sum: 794787ff5e8de49bed2f6c911c2e1a50c0f97dab8a4758fb5d3f3ea316741911
+Description:  This package contains the (almost) full Python install.
+ It's python3-light + all other packages.
+
+Package: simple-adblock
+Version: 1.8.3-13
+Depends: libc, jshn, jsonfilter
+License: GPL-3.0-or-later
+Section: net
+Architecture: all
+Installed-Size: 10168
+Filename: simple-adblock_1.8.3-13_all.ipk
+Size: 11358
+SHA256sum: 62e52a920dd3f4f27f440c89ff53d7c628524e71de033ec14c996da5589a01ff
+Description:  Simple adblock script to block ad or abuse/malware domains with DNSMASQ or Unbound.
+ Script supports local/remote list of domains and hosts-files for both black- and white-listing.
+ Please see https://github.com/openwrt/packages/blob/master/net/simple-adblock/files/README.md for more information.
+ 
+
+Package: smartdns
+Version: ce46ac58a7a30e122566e75438d1ddbb0d569f9a-1
+Depends: libc, libpthread, libopenssl1.1
+License: GPL-3.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 63869
+Filename: smartdns_ce46ac58a7a30e122566e75438d1ddbb0d569f9a-1_mipsel_24kc.ipk
+Size: 64843
+SHA256sum: 420cda7eb1bb05a21bb4785b75ae0690e157a0b66a29b67f4cd34483d961f5e3
+Description:  SmartDNS is a local DNS server which accepts DNS query requests from local network clients,
+ gets DNS query results from multiple upstream DNS servers concurrently, and returns the fastest IP to clients.
+ Unlike dnsmasq's all-servers, smartdns returns the fastest IP. 
+
+Package: socat
+Version: 1.7.3.3-1
+Depends: libc, libpthread, librt
+License: GPL-2.0 OpenSSL
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 77650
+Filename: socat_1.7.3.3-1_mipsel_24kc.ipk
+Size: 78636
+SHA256sum: 24674160538272efc6bf72a4b1eada4c1d78ff9fbcc49bb56f0274dd897e4c4d
+Description:  SoCat (for SOcket CAT) establishes two bidirectional byte streams and
+ transfers data between them.
+ Data channels may be files, pipes, devices (terminal or modem, etc.), or
+ sockets (Unix, IPv4, IPv6, raw, UDP, TCP, SSL). It provides forking,
+ logging and tracing, different modes for interprocess communication and
+ many more options.
+
+Package: unzip
+Version: 6.0-8
+Depends: libc
+License: BSD-4-Clause
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 101812
+Filename: unzip_6.0-8_mipsel_24kc.ipk
+Size: 102837
+SHA256sum: 83107a62e7ffc080e24151b64bc3abcfdc9200822d31b6f1fe75d41f9aa636e9
+Description:  InfoZIP's unzip program. With the exception of multi-volume archives
+ (ie, .ZIP files that are split across several disks using PKZIP's /& option),
+ this can handle any file produced either by PKZIP, or the corresponding
+ InfoZIP zip program.
+
+Package: watchcat
+Version: 1-7
+Depends: libc
+License: GPL-2.0
+Section: utils
+Architecture: all
+Installed-Size: 2170
+Filename: watchcat_1-7_all.ipk
+Size: 2955
+SHA256sum: 1ddf5784e56b13f539fc9d7beeebc520b9b5784aa02d6da417e1bb3e80dddb68
+Description:  Allows to configure a periodically reboot, or after losing internet connectivity. Configured trough UCI /etc/config/system.
+
+Package: wget
+Version: 1.20.3-4
+Depends: libc, libpcre, zlib, libopenssl1.1, librt
+Provides: gnu-wget, wget-ssl
+Alternatives: 300:/usr/bin/wget:/usr/bin/wget-ssl
+License: GPL-3.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 182424
+Filename: wget_1.20.3-4_mipsel_24kc.ipk
+Size: 183404
+SHA256sum: 6a01c495966145e43b372aaa02524d4cadc25fed9543c800cb38cbd22ea2a1bb
+Description:  Wget is a network utility to retrieve files from the Web using http
+ and ftp, the two most widely used Internet protocols. It works
+ non-interactively, so it will work in the background, after having
+ logged off. The program supports recursive retrieval of web-authoring
+ pages as well as ftp sites -- you can use wget to make mirrors of
+ archives and home pages or to travel the Web like a WWW robot.
+ This package is built with SSL support.
+
+Package: zerotier
+Version: 1.4.6-1
+Depends: libc, libpthread, libstdcpp6, kmod-tun, ip, libminiupnpc, libnatpmp
+License: BSL 1.1
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 364393
+Filename: zerotier_1.4.6-1_mipsel_24kc.ipk
+Size: 364419
+SHA256sum: c05ff2998847e0ae04f1f11d10e4fbc608af8b6451f0db0382c55488a753dac5
+Description:  ZeroTier creates a global provider-independent virtual private cloud network.
+
