@@ -1,0 +1,375 @@
+Package: bash
+Version: 5.0-4
+Depends: libc, libncurses6, libreadline8
+License: GPL-3.0-or-later
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 269114
+Filename: bash_5.0-4_mipsel_24kc.ipk
+Size: 269953
+SHA256sum: 10fc19825c9770383bc3321d58166075ed3215bb3a81555aab7b74a8b51e858a
+Description:  Bash is an sh-compatible command language interpreter that executes
+ commands read from the standard input or from a file. Bash also
+ incorporates useful features from the Korn and C shells (ksh and csh).
+
+Package: boost-program_options
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+License: BSL-1.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 109442
+Filename: boost-program_options_1.71.0-6_mipsel_24kc.ipk
+Size: 110050
+SHA256sum: 9ae856f16e369d573ebc45c6e7d5e4f11de71fd56d2166aaa91f0f5b28387621
+Description:  This package contains the Boost program_options library.
+
+Package: boost-system
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+License: BSL-1.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 1097
+Filename: boost-system_1.71.0-6_mipsel_24kc.ipk
+Size: 1891
+SHA256sum: 5750e1ac2472e88594e9e60256a4164ac75f9315f87c1024fac516a05bad3ce0
+Description:  This package contains the Boost system library.
+
+Package: boost
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+License: BSL-1.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 105
+Filename: boost_1.71.0-6_mipsel_24kc.ipk
+Size: 1246
+SHA256sum: e758b06cd679f96b235df2d6ff21878cacc71497d45d1408d8adc8bd73e1f7d8
+Description:  This package provides the Boost v1.71.0 libraries.
+ Boost is a set of free, peer-reviewed, portable C++ source libraries.
+ 
+ This package provides the following run-time libraries:
+ - atomic
+ - chrono
+ - container
+ - context
+ - contract
+ - coroutine and coroutine2 (Coroutine is deprecated - use Coroutine2)
+ - date_time
+ - exception
+ - filesystem
+ - fiber
+ - graph
+ - - graph-parallel
+ - iostreams
+ - locale (Requires kernel being compiled with full language support)
+ - log
+ - math
+ - program_options
+ - python
+ - python3
+ - random
+ - regex
+ - serialization and wserialization
+ - stackstrace
+ - system
+ - thread
+ - timer
+ - type_erasure
+ - wave
+ 
+ There are many more header-only libraries supported by Boost.
+ See more at http://www.boost.org/doc/libs/1_71_0/
+
+Package: coreutils-base64
+Version: 8.30-2
+Depends: libc, coreutils
+Alternatives: 300:/bin/base64:/usr/bin/gnu-base64
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 18282
+Filename: coreutils-base64_8.30-2_mipsel_24kc.ipk
+Size: 19030
+SHA256sum: 21a95e11a4640dd3f20c9e672ff32535950e2a8854409fe25673ba00d9b5de6e
+Description:  Full version of standard GNU base64 utility.
+
+Package: coreutils-nohup
+Version: 8.30-2
+Depends: libc, coreutils
+Alternatives: 300:/usr/bin/nohup:/usr/bin/gnu-nohup
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 16301
+Filename: coreutils-nohup_8.30-2_mipsel_24kc.ipk
+Size: 17011
+SHA256sum: 33abdaf7af25d3a64710d5cb1e605858adc820f9c0d44451316f2837f4fa0775
+Description:  Full version of standard GNU nohup utility.
+
+Package: coreutils
+Version: 8.30-2
+Depends: libc
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 106
+Filename: coreutils_8.30-2_mipsel_24kc.ipk
+Size: 924
+SHA256sum: cd9c364915757e114c9e74e45c8b9bc1fe5079b146b97d63ed5047c79723b494
+Description:  Full versions of standard GNU utilities. If an equivalent Busybox applet is
+ available, you should consider compiling that instead as Busybox applets are
+ usually smaller, at the expense of reduced functionality.
+
+Package: ddns-scripts
+Version: 2.7.8-13
+License: GPL-2.0
+Section: net
+Architecture: all
+Installed-Size: 15007
+Filename: ddns-scripts_2.7.8-13_all.ipk
+Size: 16082
+SHA256sum: 1a1b59203c5756613af1dc50c352b28c989ea7243980b5123a4e1e6ec828555d
+Description:  Dynamic DNS Client scripts (with IPv6 support) - Info: https://openwrt.org/docs/guide-user/services/ddns/client
+
+Package: etherwake
+Version: 1.09-4
+Depends: libc
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 4869
+Filename: etherwake_1.09-4_mipsel_24kc.ipk
+Size: 5787
+SHA256sum: c1c6d025d32bdc7374565c33987d8c8c20947e78121f1e7c30e5ac04e4e3a12b
+Description:  You can wake up WOL compliant Computers which have been powered down to
+ sleep mode or start WOL compliant Computers with a BIOS feature.
+ WOL is an abbreviation for Wake-on-LAN. It is a standard that allows you
+ to turn on a computer from another location over a network connection.
+ ether-wake also supports WOL passwords.
+
+Package: haproxy
+Version: 2.0.15-1
+Depends: libc, libpcre, libltdl7, zlib, libpthread, libopenssl1.1, libncurses6, libreadline8, libatomic1
+License: GPL-2.0-only
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 679351
+Filename: haproxy_2.0.15-1_mipsel_24kc.ipk
+Size: 679963
+SHA256sum: 01b123930817b91e19703f2766a60771f196467e963b705fa14ed9f71d3ffee4
+Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
+ This package is built with SSL and LUA support.
+
+Package: libcap
+Version: 2.27-1
+Depends: libc
+License: GPL-2.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 5941
+Filename: libcap_2.27-1_mipsel_24kc.ipk
+Size: 6660
+SHA256sum: 23274d1bf9b3eff2464a280d54125cc272c044a6892b9bd64c790d74512fc2f3
+Description:  Linux capabilities library
+
+Package: libev
+Version: 4.25-1
+Depends: libc
+License: BSD-2-Clause
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 20822
+Filename: libev_4.25-1_mipsel_24kc.ipk
+Size: 21637
+SHA256sum: 33e3498d41f58ab401a40139e66c31df6462b98702b73c1f8f0bb92f04e3d667
+Description:  A full-featured and high-performance event loop that is loosely modelled after
+ libevent, but without its limitations and bugs.
+
+Package: libhttp-parser
+Version: 2.9.2-1
+Depends: libc
+License: MIT
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 15155
+Filename: libhttp-parser_2.9.2-1_mipsel_24kc.ipk
+Size: 16152
+SHA256sum: de3624b546e26ed670daec64addcfdf5aa8945252ae8e1951e64b12d582885ba
+Description:  A parser for HTTP messages written in C. It parses both requests and responses.
+ The parser is designed to be used in performance HTTP applications.
+ It does not make any syscalls nor allocations, it does not buffer data,
+ it can be interrupted at anytime. Depending on your architecture,
+ it only requires about 40 bytes of data per message stream
+ (in a web server that is per connection).
+
+Package: libnet-1.2.x
+Version: 1.2-rc3-4
+Depends: libc, libpcap1
+License: GPL-2.0
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 29579
+Filename: libnet-1.2.x_1.2-rc3-4_mipsel_24kc.ipk
+Size: 30359
+SHA256sum: daa3d1e071c6a45538bac23772389a6955d67db30166d6aa42ad1c242ff703ac
+Description:  Low-level packet creation library
+
+Package: libpcre
+Version: 8.43-1
+Depends: libc
+License: BSD-3-Clause
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 80271
+Filename: libpcre_8.43-1_mipsel_24kc.ipk
+Size: 81139
+SHA256sum: dd9a5f3fe79cb8fa18d55f824624a195fbd04d5fa3aded1d9f758ec7348db09d
+Description:  A Perl Compatible Regular Expression library
+
+Package: libsodium
+Version: 1.0.18-1
+Depends: libc
+License: ISC
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 142157
+Filename: libsodium_1.0.18-1_mipsel_24kc.ipk
+Size: 143289
+SHA256sum: 04c57179a8824b060a1086140742e287b12c7a65ca1b49dc483b576ad349dbfd
+Description:  NaCl (pronounced "salt") is a new easy-to-use high-speed software library for network communication, encryption, decryption, signatures, etc.
+ NaCl's goal is to provide all of the core operations needed to build higher-level cryptographic tools.
+ Sodium is a portable, cross-compilable, installable, packageable fork of NaCl (based on the latest released upstream version nacl-20110221), with a compatible API.
+ The design choices, particularly in regard to the Curve25519 Diffie-Hellman function, emphasize security (whereas NIST curves emphasize "performance" at the cost of security), and "magic constants" in NaCl/Sodium have clear rationales.
+ The same cannot be said of NIST curves, where the specific origins of certain constants are not described by the standards.
+ And despite the emphasis on higher security, primitives are faster across-the-board than most implementations of the NIST standards.
+
+Package: libuv1
+Version: 1.34.2-1
+Depends: libc, libpthread, librt
+Provides: libuv
+License: MIT
+Section: libs
+Architecture: mipsel_24kc
+Installed-Size: 52383
+Filename: libuv1_1.34.2-1_mipsel_24kc.ipk
+Size: 53184
+SHA256sum: 095cf1ba1d3845c5cdcb13d9f72020a91d4d540a91bd1c6ba00886a9e31d1db5
+Description:  libuv is a multi-platform support library with a focus on asynchronous I/O. It
+ was primarily developed for use by Node.js, but it's also used by Luvit, Julia,
+ pyuv, and others.
+
+Package: node
+Version: v8.16.1-1
+Depends: libc, libstdcpp6, libopenssl1.1, zlib, libnghttp2-14, libuv1, libhttp-parser
+License: MIT
+Section: lang
+Architecture: mipsel_24kc
+Installed-Size: 4401699
+Filename: node_v8.16.1-1_mipsel_24kc.ipk
+Size: 4384352
+SHA256sum: 6887d1d7867df0b00e217724119d0d559ab978761aa6e9bd072b4c5a80e02ce2
+Description:  Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses
+ an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js'
+ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+
+Package: p910nd
+Version: 0.97-8
+Depends: libc
+License: GPLv2
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 5998
+Filename: p910nd_0.97-8_mipsel_24kc.ipk
+Size: 6967
+SHA256sum: 25415ad6ffc7ea65b511dabbf47b711f550a16ada3a8def0d4d5c51c6c298658
+Description:  p910nd is a small daemon that copies any data received on
+ the port it is listening on to the corresponding printer
+ port. It is primarily intended for diskless Linux hosts
+ running as printer drivers but there is no reason why it
+ could not be used on diskful hosts. Port 9100 is copied
+ to /dev/lp0, 9101 to /dev/lp1 and 9102 to /dev/lp2. The
+ default is port 9100 to /dev/lp0.
+
+Package: shadowsocks-libev-config
+Version: 3.3.4-3
+Depends: libc
+License: GPL-3.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 2643
+Filename: shadowsocks-libev-config_3.3.4-3_mipsel_24kc.ipk
+Size: 3426
+SHA256sum: afdcd1c4b4616c2ce27a25fbc9864b39ff0b58f86cce1b39d1490d55eca428d1
+Description:  shadowsocks-libev config scripts
+
+Package: shadowsocks-libev-ss-local
+Version: 3.3.4-3
+Depends: libc, libev, libmbedtls12, libpthread, libsodium, shadowsocks-libev-config, libpcre
+License: GPL-3.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 47045
+Filename: shadowsocks-libev-ss-local_3.3.4-3_mipsel_24kc.ipk
+Size: 47326
+SHA256sum: 87fd10753090255d807b1f25d76aed2a88662b0c247ff26b3f8dedc228108e0e
+Description:  shadowsocks-libev ss-local
+
+Package: shadowsocks-libev-ss-redir
+Version: 3.3.4-3
+Depends: libc, libev, libmbedtls12, libpthread, libsodium, shadowsocks-libev-config
+License: GPL-3.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 40565
+Filename: shadowsocks-libev-ss-redir_3.3.4-3_mipsel_24kc.ipk
+Size: 40931
+SHA256sum: 047c5a68527918ea34b731d3a708148c776f2498aec861298b835c057e610e32
+Description:  shadowsocks-libev ss-redir
+
+Package: smartdns
+Version: 2148efd262a1c2fc7bf9a79c80acf11afa7b5a05-1
+Depends: libc, libpthread, libopenssl1.1
+License: GPL-3.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 63989
+Filename: smartdns_2148efd262a1c2fc7bf9a79c80acf11afa7b5a05-1_mipsel_24kc.ipk
+Size: 64968
+SHA256sum: 0942766c335019abb2869cdd1de0f76ce512b5bf09b86f684502183bf95b70e6
+Description:  SmartDNS is a local DNS server which accepts DNS query requests from local network clients,
+ gets DNS query results from multiple upstream DNS servers concurrently, and returns the fastest IP to clients.
+ Unlike dnsmasq's all-servers, smartdns returns the fastest IP. 
+
+Package: unzip
+Version: 6.0-8
+Depends: libc
+License: BSD-4-Clause
+Section: utils
+Architecture: mipsel_24kc
+Installed-Size: 101813
+Filename: unzip_6.0-8_mipsel_24kc.ipk
+Size: 102844
+SHA256sum: dad4223bad2eee2b1956f5eee3184bd2db99c9f4b6d1d919d94ed9c965e0c4d0
+Description:  InfoZIP's unzip program. With the exception of multi-volume archives
+ (ie, .ZIP files that are split across several disks using PKZIP's /& option),
+ this can handle any file produced either by PKZIP, or the corresponding
+ InfoZIP zip program.
+
+Package: wget
+Version: 1.20.3-4
+Depends: libc, libpcre, zlib, libopenssl1.1, librt
+Provides: gnu-wget, wget-ssl
+Alternatives: 300:/usr/bin/wget:/usr/bin/wget-ssl
+License: GPL-3.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 182426
+Filename: wget_1.20.3-4_mipsel_24kc.ipk
+Size: 183404
+SHA256sum: e46560da158db049ee4f60a7c96076f535b6a674925cee0c6f42a4d5c06948b1
+Description:  Wget is a network utility to retrieve files from the Web using http
+ and ftp, the two most widely used Internet protocols. It works
+ non-interactively, so it will work in the background, after having
+ logged off. The program supports recursive retrieval of web-authoring
+ pages as well as ftp sites -- you can use wget to make mirrors of
+ archives and home pages or to travel the Web like a WWW robot.
+ This package is built with SSL support.
+
