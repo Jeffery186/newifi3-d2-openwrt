@@ -1,0 +1,269 @@
+Package: chinadns-ng
+Version: 1.0-beta.22-2
+Depends: libc, ipset
+License: GPLv3
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 17076
+Filename: chinadns-ng_1.0-beta.22-2_mipsel_24kc.ipk
+Size: 17855
+SHA256sum: e73a19d71abe472dce9ef726822df33beeca5ee41f2a8d460ce3badec5154191
+Description:  ChinaDNS next generation, refactoring with epoll and ipset.
+
+Package: dns2socks
+Version: 2.1-20200218
+Depends: libc, libpthread
+License: BSD-3-Clause
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 11391
+Filename: dns2socks_2.1-20200218_mipsel_24kc.ipk
+Size: 12174
+SHA256sum: 32763ebaabbdac45df463a53f4cfd405242d7bd34f25d0a9996279059e3f6a3b
+Description:  This is a utility to resolve DNS requests via a SOCKS5 tunnel and caches the answers.
+
+Package: ipt2socks
+Version: 1.1.3-1
+Depends: libc
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 32162
+Filename: ipt2socks_1.1.3-1_mipsel_24kc.ipk
+Size: 32886
+SHA256sum: 82702a1cac3f59e29e38c569a4d0e41a2a57a4a1fe699450a10be6ed888ac0da
+Description:  Utility for converting iptables (REDIRECT/TPROXY) to SOCKS5.
+
+Package: luci-app-control-timewol
+Version: 1.0-3-20190309
+Depends: libc, etherwake
+Section: luci
+Architecture: all
+Installed-Size: 2813
+Filename: luci-app-control-timewol_1.0-3-20190309_all.ipk
+Size: 3574
+SHA256sum: d69ed7e02ef6894a02cf87b0c32216b6267fee55487cb8da740d19c58becae35
+Description:  LuCI support for Timewol From Koolshare
+
+Package: luci-app-control-webrestriction
+Version: 1.0-5-20200107
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 3138
+Filename: luci-app-control-webrestriction_1.0-5-20200107_all.ipk
+Size: 3901
+SHA256sum: 162855f48b76c5551c3dedc2eb2a421dfd3c67e1aa97641cf92a43012de0a6d0
+Description:  LuCI support for Webrestriction From Koolshare
+
+Package: luci-app-control-weburl
+Version: 1.0-3-20190309
+Depends: libc, iptables-mod-filter, kmod-ipt-filter
+Section: luci
+Architecture: all
+Installed-Size: 3187
+Filename: luci-app-control-weburl_1.0-3-20190309_all.ipk
+Size: 3972
+SHA256sum: 703316efdba625bf5f057579ec9cfaabce2ce49e4df1d4e525f9dd9212e1c239
+Description:  LuCI support for Weburl From Koolshare
+
+Package: luci-app-passwall
+Version: 3.9-33
+Depends: libc, libmbedtls12, iptables-mod-tproxy, ip, ipset, coreutils, coreutils-base64, coreutils-nohup, luci-lib-jsonc, curl, ca-certificates, resolveip, unzip, dnsmasq-full, tcping, libuci-lua, ipt2socks, shadowsocksr-libev-alt, shadowsocksr-libev-ssr-local, shadowsocksr-libev-server, v2ray, trojan-plus, haproxy, chinadns-ng, pdnsd-alt, dns2socks
+Section: opt
+Architecture: all
+Installed-Size: 882937
+Filename: luci-app-passwall_3.9-33_all.ipk
+Size: 883772
+SHA256sum: 915775d97b4c731f52fa94e9c921afc29078fc13b343aaa224333ab875ac9f62
+Description:  LuCI support for PassWall
+
+Package: luci-app-ramfree
+Version: 1.0-1
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 419
+Filename: luci-app-ramfree_1.0-1_all.ipk
+Size: 1089
+SHA256sum: b6e12f9f8234048bf264b034b0c308a3d1fe8d6dd8791c4da56952e632d3255b
+Description:  Add Release RAM Button
+
+Package: luci-app-timecontrol
+Version: 1.0-1-20200402
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 2800
+Filename: luci-app-timecontrol_1.0-1-20200402_all.ipk
+Size: 3548
+SHA256sum: b848483a26af9cab9e9d4cad5928ee843968a71aa1d951e552c235049334a8df
+Description:  LuCI support for Time Control
+
+Package: luci-i18n-control-timewol-zh-cn
+Version: 1.0-3-20190309
+Depends: libc, luci-app-control-timewol
+Section: luci
+Architecture: all
+Installed-Size: 400
+Filename: luci-i18n-control-timewol-zh-cn_1.0-3-20190309_all.ipk
+Size: 1202
+SHA256sum: 997194d12a00bd08e9e94ce6c4e6e92d9ca21ab0b37a8a7ef2e8cca3a4d9b3b3
+Description:  Translation for luci-app-control-timewol - 中文 (Chinese)
+
+Package: luci-i18n-control-webrestriction-zh-cn
+Version: 1.0-5-20200107
+Depends: libc, luci-app-control-webrestriction
+Section: luci
+Architecture: all
+Installed-Size: 406
+Filename: luci-i18n-control-webrestriction-zh-cn_1.0-5-20200107_all.ipk
+Size: 1208
+SHA256sum: b8b7b803f3fc20ebee6ccc23c2b2f2e22b3e28c97fd2cdfd2310f238fc213386
+Description:  Translation for luci-app-control-webrestriction - 中文 (Chinese)
+
+Package: luci-i18n-control-weburl-zh-cn
+Version: 1.0-3-20190309
+Depends: libc, luci-app-control-weburl
+Section: luci
+Architecture: all
+Installed-Size: 400
+Filename: luci-i18n-control-weburl-zh-cn_1.0-3-20190309_all.ipk
+Size: 1199
+SHA256sum: b4187b1c18a527cd171a64f4a76a941473435c0961706b6a5fff773d3e9795d4
+Description:  Translation for luci-app-control-weburl - 中文 (Chinese)
+
+Package: luci-i18n-ramfree-zh-cn
+Version: 1.0-1
+Depends: libc, luci-app-ramfree
+Section: luci
+Architecture: all
+Installed-Size: 405
+Filename: luci-i18n-ramfree-zh-cn_1.0-1_all.ipk
+Size: 1192
+SHA256sum: ffa94ef9c59854fbfbd18d896e5dd80e3b45f5b61aa0b2b20f65a8e6e1597bb4
+Description:  Translation for luci-app-ramfree - 中文 (Chinese)
+
+Package: luci-i18n-timecontrol-zh-cn
+Version: 1.0-1-20200402
+Depends: libc, luci-app-timecontrol
+Section: luci
+Architecture: all
+Installed-Size: 702
+Filename: luci-i18n-timecontrol-zh-cn_1.0-1-20200402_all.ipk
+Size: 1504
+SHA256sum: 07e4c1707cf7d8f2899127712bca0db79eab4170b6a793169693e5318e608036
+Description:  Translation for luci-app-timecontrol - 中文 (Chinese)
+
+Package: luci-theme-argon-dark-mod
+Version: 1.6-20200523
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 1520366
+Filename: luci-theme-argon-dark-mod_1.6-20200523_all.ipk
+Size: 1520560
+SHA256sum: 7d939c827474388dbcbaaafed2a30ebaa54b6ceb9731603802cbeaebc2ba1200
+Description:  Argon Dark Mod Theme
+
+Package: luci-theme-argon-light-mod
+Version: 1.6-20200523
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 1520366
+Filename: luci-theme-argon-light-mod_1.6-20200523_all.ipk
+Size: 1520542
+SHA256sum: 78e6692db919538e929ed081eab6f6e9267111ba459da5f6552fa95e0dd1a25d
+Description:  Argon Light Mod Theme
+
+Package: pdnsd-alt
+Version: 1.2.9b-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d
+Depends: libc, libpthread
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 78526
+Filename: pdnsd-alt_1.2.9b-par-a8e46ccba7b0fa2230d6c42ab6dcd92926f6c21d_mipsel_24kc.ipk
+Size: 79548
+SHA256sum: f41970ab4f78be83eb5bc0c16008dc8b39290154ddf6e9ea8e862c3285e8180a
+Description:  pdnsd, is an IPv6 capable proxy DNS server with permanent caching (the cache
+ contents are written to hard disk on exit) that is designed to cope with
+ unreachable or down DNS servers (for example in dial-in networking).
+ 
+ pdnsd can be used with applications that do dns lookups, eg on startup, and
+ can't be configured to change that behaviour, to prevent the often
+ minute-long hangs (or even crashes) that result from stalled dns queries.
+
+Package: shadowsocksr-libev-alt
+Version: 2.5.6-5
+Depends: libc, libopenssl1.1, libpthread, libpcre, zlib
+License: GPLv3
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 100168
+Filename: shadowsocksr-libev-alt_2.5.6-5_mipsel_24kc.ipk
+Size: 100645
+SHA256sum: 86f4ecebb8599fbcadbbf2be89dcc72f080a0335666ee261557e89622fe4f7e2
+Description:  Lightweight Secured Socks5 Proxy
+
+Package: shadowsocksr-libev-server
+Version: 2.5.6-5
+Depends: libc, libopenssl1.1, libpthread, libpcre, zlib
+License: GPLv3
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 117330
+Filename: shadowsocksr-libev-server_2.5.6-5_mipsel_24kc.ipk
+Size: 117707
+SHA256sum: 2e9e6ed20af8aa698aa2562f18edfe5c65b1388b0a39018d76d71c8e75afc18e
+Description:  Lightweight Secured Socks5 Proxy
+
+Package: shadowsocksr-libev-ssr-local
+Version: 2.5.6-5
+Depends: libc, libopenssl1.1, libpthread, libpcre, zlib
+License: GPLv3
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 106881
+Filename: shadowsocksr-libev-ssr-local_2.5.6-5_mipsel_24kc.ipk
+Size: 107172
+SHA256sum: 05af92f8d70f9c8d7943b69400c6926c174a4d5033499fb5f2112ff6d2ac9fde
+Description:  Lightweight Secured Socks5 Proxy
+
+Package: tcping
+Version: 0.3-1
+Depends: libc
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 3761
+Filename: tcping_0.3-1_mipsel_24kc.ipk
+Size: 4423
+SHA256sum: 7752be748c2cc58be19c9106f3c99f7c307d9a4e4ad6a48e924aa6fb6a7faf65
+Description:  tcping measures the latency of a tcp-connection
+
+Package: trojan-plus
+Version: 10.0.1-1
+Depends: libc, libpthread, libstdcpp6, libopenssl1.1, boost, boost-system, boost-program_options
+License: GPL-3.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 346599
+Filename: trojan-plus_10.0.1-1_mipsel_24kc.ipk
+Size: 347061
+SHA256sum: 9d0fa67db6694448b76ec2393097728fc02577239ec9ad7de25affd3ccc09e2c
+Description:  An unidentifiable mechanism that helps you bypass GFW. It's compatible with original trojan with experimental features.
+
+Package: v2ray
+Version: 4.27.0-1
+Depends: libc, ca-certificates
+License: MIT
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 4043065
+Filename: v2ray_4.27.0-1_mipsel_24kc.ipk
+Size: 4044641
+SHA256sum: 68d63929f780f883c0335883874a790dd6ac96021d797925a4252e8ee2a30a96
+Description:  Project V is a set of network tools that help you to build your own computer network.
+ It secures your network connections and thus protects your privacy.
+ 
+ This package contains v2ray, v2ctl and v2ray-assets.
+

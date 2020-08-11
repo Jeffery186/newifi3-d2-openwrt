@@ -1,0 +1,363 @@
+Package: boost-program_options
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+Source: feeds/packages/libs/boost
+SourceName: boost-program_options
+License: BSL-1.0
+LicenseFiles: LICENSE_1_0.txt
+Section: libs
+Maintainer: Carlos M. Ferreira <carlosmf.pt@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 109442
+Filename: boost-program_options_1.71.0-6_mipsel_24kc.ipk
+Size: 110058
+SHA256sum: 74a1c4aa23c1ba47e33558369583a0924b3ec86c1916c0b89b49e0bd6c3ca184
+Description:  This package contains the Boost program_options library.
+
+Package: boost-system
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+Source: feeds/packages/libs/boost
+SourceName: boost-system
+License: BSL-1.0
+LicenseFiles: LICENSE_1_0.txt
+Section: libs
+Maintainer: Carlos M. Ferreira <carlosmf.pt@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 1098
+Filename: boost-system_1.71.0-6_mipsel_24kc.ipk
+Size: 1892
+SHA256sum: f27a51af58bc17f134f0677a1a5a140a1607adfacb254782dff663f2b743e879
+Description:  This package contains the Boost system library.
+
+Package: boost
+Version: 1.71.0-6
+Depends: libc, libstdcpp6, libpthread, librt
+Source: feeds/packages/libs/boost
+SourceName: boost
+License: BSL-1.0
+LicenseFiles: LICENSE_1_0.txt
+Section: libs
+Maintainer: Carlos M. Ferreira <carlosmf.pt@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 104
+Filename: boost_1.71.0-6_mipsel_24kc.ipk
+Size: 1237
+SHA256sum: c9f708a73ddcafc3d6868e3c185b9801913f012d4fd94f28700935380ddc8a3e
+Description:  This package provides the Boost v1.71.0 libraries.
+ Boost is a set of free, peer-reviewed, portable C++ source libraries.
+ 
+ This package provides the following run-time libraries:
+ - atomic
+ - chrono
+ - container
+ - context
+ - contract
+ - coroutine and coroutine2 (Coroutine is deprecated - use Coroutine2)
+ - date_time
+ - exception
+ - filesystem
+ - fiber
+ - graph
+ - - graph-parallel
+ - iostreams
+ - locale (Requires kernel being compiled with full language support)
+ - log
+ - math
+ - program_options
+ - python
+ - python3
+ - random
+ - regex
+ - serialization and wserialization
+ - stackstrace
+ - system
+ - thread
+ - timer
+ - type_erasure
+ - wave
+ 
+ There are many more header-only libraries supported by Boost.
+ See more at http://www.boost.org/doc/libs/1_71_0/
+
+Package: coreutils-base64
+Version: 8.30-2
+Depends: libc, coreutils
+Alternatives: 300:/bin/base64:/usr/bin/gnu-base64
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils-base64
+Section: utils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mipsel_24kc
+Installed-Size: 18283
+Filename: coreutils-base64_8.30-2_mipsel_24kc.ipk
+Size: 19029
+SHA256sum: 8f7a3dd3607cdba2fdeac94e7831750378510fc04fc57a43e5a5f0b7ce041b41
+Description:  Full version of standard GNU base64 utility.
+
+Package: coreutils-nohup
+Version: 8.30-2
+Depends: libc, coreutils
+Alternatives: 300:/usr/bin/nohup:/usr/bin/gnu-nohup
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils-nohup
+Section: utils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mipsel_24kc
+Installed-Size: 16299
+Filename: coreutils-nohup_8.30-2_mipsel_24kc.ipk
+Size: 17006
+SHA256sum: 759c09f06effe47dc747173e3999cc49926db454340313ac5d8d433527d917b8
+Description:  Full version of standard GNU nohup utility.
+
+Package: coreutils
+Version: 8.30-2
+Depends: libc
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils
+Section: utils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: mipsel_24kc
+Installed-Size: 104
+Filename: coreutils_8.30-2_mipsel_24kc.ipk
+Size: 921
+SHA256sum: 35f9e214416a52cb57f3d6523fc894af7c025c5044caa2ec74dfbbcf73251d17
+Description:  Full versions of standard GNU utilities. If an equivalent Busybox applet is
+ available, you should consider compiling that instead as Busybox applets are
+ usually smaller, at the expense of reduced functionality.
+
+Package: ddns-scripts
+Version: 2.7.8-13
+Source: feeds/packages/net/ddns-scripts
+SourceName: ddns-scripts
+License: GPL-2.0
+Section: net
+Architecture: all
+Installed-Size: 15013
+Filename: ddns-scripts_2.7.8-13_all.ipk
+Size: 16086
+SHA256sum: c6138edb6cc7c85b080ec610f3b31ba13f7caf86fb6c215fe9dca94bdf775e13
+Description:  Dynamic DNS Client scripts (with IPv6 support) - Info: https://openwrt.org/docs/guide-user/services/ddns/client
+
+Package: etherwake
+Version: 1.09-4
+Depends: libc
+Source: feeds/packages/net/etherwake
+SourceName: etherwake
+Section: net
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: mipsel_24kc
+Installed-Size: 4870
+Filename: etherwake_1.09-4_mipsel_24kc.ipk
+Size: 5780
+SHA256sum: aa13fcd11b6824a6c5686dccf308aa5a76cd92a75916e1497ade7fad97b22750
+Description:  You can wake up WOL compliant Computers which have been powered down to
+ sleep mode or start WOL compliant Computers with a BIOS feature.
+ WOL is an abbreviation for Wake-on-LAN. It is a standard that allows you
+ to turn on a computer from another location over a network connection.
+ ether-wake also supports WOL passwords.
+
+Package: haproxy
+Version: 2.0.15-1
+Depends: libc, libpcre, libltdl7, zlib, libpthread, libopenssl1.1, libncurses6, libreadline8, libatomic1
+Source: feeds/packages/net/haproxy
+SourceName: haproxy
+License: GPL-2.0-only
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Thomas Heil <heil@terminal-consulting.de>, Christian Lachner <gladiac@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 679352
+Filename: haproxy_2.0.15-1_mipsel_24kc.ipk
+Size: 679958
+SHA256sum: a1052f0f332ff14859367faf6acd3400a2d422007a82cfec5f42e94bb847c077
+Description:  Open source Reliable, High Performance TCP/HTTP Load Balancer.
+ This package is built with SSL and LUA support.
+
+Package: libhttp-parser
+Version: 2.9.2-1
+Depends: libc
+Source: feeds/packages/libs/libhttp-parser
+SourceName: libhttp-parser
+License: MIT
+LicenseFiles: LICENSE-MIT
+Section: libs
+Maintainer: Ramanathan Sivagurunathan <ramzthecoder@gmail.com>, Hirokazu MORIKAWA <morikw2@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 15151
+Filename: libhttp-parser_2.9.2-1_mipsel_24kc.ipk
+Size: 16130
+SHA256sum: 448232b34159dcdaaf013fce0fbca2fdbc1b62f20a2755cbe5cd12145c40a621
+Description:  A parser for HTTP messages written in C. It parses both requests and responses.
+ The parser is designed to be used in performance HTTP applications.
+ It does not make any syscalls nor allocations, it does not buffer data,
+ it can be interrupted at anytime. Depending on your architecture,
+ it only requires about 40 bytes of data per message stream
+ (in a web server that is per connection).
+
+Package: libminiupnpc
+Version: 2.1.20190408-2
+Depends: libc
+Source: feeds/packages/net/miniupnpc
+SourceName: libminiupnpc
+License: BSD-3c
+LicenseFiles: LICENSE
+Section: libs
+Maintainer: Steven Barth <cyrus@openwrt.org>
+Architecture: mipsel_24kc
+Installed-Size: 18272
+Filename: libminiupnpc_2.1.20190408-2_mipsel_24kc.ipk
+Size: 19064
+SHA256sum: 01ea52eb2371f67e1573f3fcec43704840ef1871365eaf559976b22470a53ad8
+Description:  Lightweight UPnP library
+
+Package: libnatpmp
+Version: 20150609-1
+Depends: libc
+Source: feeds/packages/libs/libnatpmp
+SourceName: libnatpmp
+License: BSD-3c
+LicenseFiles: LICENSE
+Section: libs
+Maintainer: Hauke Mehrtens <hauke@hauke-m.de>
+Architecture: mipsel_24kc
+Installed-Size: 3099
+Filename: libnatpmp_20150609-1_mipsel_24kc.ipk
+Size: 4032
+SHA256sum: 7c6b4b1c96470b564ee77b4ba7b353c426d25249084b49fa4f3635785cc375d5
+Description:  libnatpmp is an attempt to make a portable and fully compliant implementation
+ of the protocol for the client side. It is based on non blocking sockets and
+ all calls of the API are asynchronous. It is therefore very easy to integrate
+ the NAT-PMP code to any event driven code.
+ This package contains the shared library.
+
+Package: libpcre
+Version: 8.43-1
+Depends: libc
+Source: feeds/packages/libs/pcre
+SourceName: libpcre
+License: BSD-3-Clause
+LicenseFiles: LICENCE
+Section: libs
+Maintainer: Thomas Heil <heil@terminal-consulting.de>
+Architecture: mipsel_24kc
+Installed-Size: 80267
+Filename: libpcre_8.43-1_mipsel_24kc.ipk
+Size: 81137
+SHA256sum: 9e29adb18e4f0ea40cc26fce9bfef34db11eff6279c667bac42b38b9f13b83cc
+Description:  A Perl Compatible Regular Expression library
+
+Package: libuv1
+Version: 1.34.2-1
+Depends: libc, libpthread, librt
+Provides: libuv
+Source: feeds/packages/libs/libuv
+SourceName: libuv
+License: MIT
+LicenseFiles: LICENSE
+Section: libs
+Maintainer: Marko Ratkaj <marko.ratkaj@sartura.hr>
+Architecture: mipsel_24kc
+Installed-Size: 52380
+Filename: libuv1_1.34.2-1_mipsel_24kc.ipk
+Size: 53180
+SHA256sum: 2d995ebdb0ad625b7bf22b8adfead6ede6151c4801a2660d21f083a104c546d7
+Description:  libuv is a multi-platform support library with a focus on asynchronous I/O. It
+ was primarily developed for use by Node.js, but it's also used by Luvit, Julia,
+ pyuv, and others.
+
+Package: node
+Version: v8.16.1-1
+Depends: libc, libstdcpp6, libopenssl1.1, zlib, libnghttp2-14, libuv1, libhttp-parser
+Source: feeds/packages/lang/node
+SourceName: node
+License: MIT
+LicenseFiles: LICENSE
+Section: lang
+Maintainer: John Crispin <blogic@openwrt.org>, Adrian Panella <ianchi74@outlook.com>
+Architecture: mipsel_24kc
+Installed-Size: 4401646
+Filename: node_v8.16.1-1_mipsel_24kc.ipk
+Size: 4384360
+SHA256sum: 6455070d1f1264095e22c8c97c908d43bd2eef1e18729e99415e12741f6f049d
+Description:  Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js uses
+ an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js'
+ package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+
+Package: smartdns
+Version: 8.2020.03-1
+Depends: libc, libpthread, libopenssl1.1
+Source: feeds/packages/net/smartdns
+SourceName: smartdns
+License: GPL-3.0-or-later
+LicenseFiles: LICENSE
+Section: net
+Maintainer: Nick Peng <pymumu@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 64391
+Filename: smartdns_8.2020.03-1_mipsel_24kc.ipk
+Size: 65287
+SHA256sum: bab1438cde87623ff57c8485bf92bc606ab4c10119c65b4e157678e541991161
+Description:  SmartDNS is a local DNS server which accepts DNS query requests from local network clients,
+ gets DNS query results from multiple upstream DNS servers concurrently, and returns the fastest IP to clients.
+ Unlike dnsmasq's all-servers, smartdns returns the fastest IP. 
+
+Package: unzip
+Version: 6.0-8
+Depends: libc
+Source: feeds/packages/utils/unzip
+SourceName: unzip
+License: BSD-4-Clause
+LicenseFiles: LICENSE
+Section: utils
+Maintainer: Álvaro Fernández Rojas <noltari@gmail.com>
+Architecture: mipsel_24kc
+Installed-Size: 101803
+Filename: unzip_6.0-8_mipsel_24kc.ipk
+Size: 102821
+SHA256sum: f9e88e1b836de1dab2e14e0afba2c3db00ecc81bd7144ad1463ef43196c306ff
+Description:  InfoZIP's unzip program. With the exception of multi-volume archives
+ (ie, .ZIP files that are split across several disks using PKZIP's /& option),
+ this can handle any file produced either by PKZIP, or the corresponding
+ InfoZIP zip program.
+
+Package: wget
+Version: 1.20.3-4
+Depends: libc, libpcre, zlib, libopenssl1.1, librt
+Provides: gnu-wget, wget-ssl
+Alternatives: 300:/usr/bin/wget:/usr/bin/wget-ssl
+Source: feeds/packages/net/wget
+SourceName: wget
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: net
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: mipsel_24kc
+Installed-Size: 182422
+Filename: wget_1.20.3-4_mipsel_24kc.ipk
+Size: 183375
+SHA256sum: 681f1bfd31cbb5206e5935527dad8afe35f9005723a54144e0148fe21727802a
+Description:  Wget is a network utility to retrieve files from the Web using http
+ and ftp, the two most widely used Internet protocols. It works
+ non-interactively, so it will work in the background, after having
+ logged off. The program supports recursive retrieval of web-authoring
+ pages as well as ftp sites -- you can use wget to make mirrors of
+ archives and home pages or to travel the Web like a WWW robot.
+ This package is built with SSL support.
+
+Package: zerotier
+Version: 1.4.6-1
+Depends: libc, libpthread, libstdcpp6, kmod-tun, ip, libminiupnpc, libnatpmp
+Source: feeds/packages/net/zerotier
+SourceName: zerotier
+License: BSL 1.1
+LicenseFiles: LICENSE.txt
+Section: net
+Maintainer: Moritz Warning <moritzwarning@web.de>
+Architecture: mipsel_24kc
+Installed-Size: 364253
+Filename: zerotier_1.4.6-1_mipsel_24kc.ipk
+Size: 364297
+SHA256sum: 20590b8776b37b02e9615a2c4acff464f07d7b979d296d577db95be48967b4ca
+Description:  ZeroTier creates a global provider-independent virtual private cloud network.
+
