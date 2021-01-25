@@ -10,7 +10,7 @@
 
 ## 使用方法：
 
- - 下载名字为`openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`这样的固件，在Breed下刷入
+ - 下载名字为`openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`这样的固件，在Breed下刷入，譬如https://raw.githubusercontent.com/zyhibook/newifi3-d2-openwrt/master/openwrt-ramips-mt7621-d-team_newifi-d2-coolsnowwolf-0122-SSRPLUS/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
 
  - 默认管理地址：192.168.1.1；密码：password
 
