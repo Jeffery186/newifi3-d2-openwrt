@@ -1,0 +1,44 @@
+Package: luci-app-ssr-plus
+Version: 182-8
+Depends: libc, shadowsocksr-libev-alt, ipset, ip-full, iptables-mod-tproxy, dnsmasq-full, coreutils, coreutils-base64, pdnsd-alt, wget-ssl, lua, libuci-lua, microsocks, dns2socks, shadowsocks-libev-ss-local, shadowsocksr-libev-ssr-local, shadowsocks-libev-ss-redir, simple-obfs, tcping, resolveip, v2ray-plugin, xray, trojan-go
+Section: luci
+Architecture: all
+Installed-Size: 184260
+Filename: luci-app-ssr-plus_182-8_all.ipk
+Size: 184421
+SHA256sum: 4096a4bce45a3a6befd2eb66aefe2f04b8a960baa4bbddb19e8fc70e46b5ded7
+Description:  SS/SSR/V2Ray/Trojan/NaiveProxy/Socks5/Tun LuCI interface
+
+Package: luci-i18n-ssr-plus-zh-cn
+Version: 182-8
+Depends: libc, luci-app-ssr-plus
+Section: luci
+Architecture: all
+Installed-Size: 6363
+Filename: luci-i18n-ssr-plus-zh-cn_182-8_all.ipk
+Size: 7211
+SHA256sum: ed3bc7f968de5e72adaf2785e1d67bc1020d93a32a54658eafc2b4b5636549a7
+Description:  Translation for luci-app-ssr-plus - 简体中文 (Simplified Chinese)
+
+Package: tcping
+Version: 0.3-1
+Depends: libc
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 3409
+Filename: tcping_0.3-1_mipsel_24kc.ipk
+Size: 4093
+SHA256sum: fdb190b100f10d140cf093c56ba40d75bf63072ae558460b67db773848bef61e
+Description:  tcping measures the latency of a tcp-connection
+
+Package: trojan-go
+Version: 0.8.2-1
+Depends: libc
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 2992885
+Filename: trojan-go_0.8.2-1_mipsel_24kc.ipk
+Size: 2994206
+SHA256sum: a416895664f17aa12c6e7818db2f7f7517071e61d6860df618508a121ec39cf2
+Description:  An unidentifiable mechanism that helps you bypass GFW. It's compatible with original trojan with experimental features.
+
