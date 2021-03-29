@@ -1,6 +1,0 @@
-src-git packages https://github.com/Lienol/openwrt-packages.git^62c8d0ed2
-src-git routing https://git.openwrt.org/feed/routing.git^ad79a0f
-src-git telephony https://git.openwrt.org/feed/telephony.git^91b34e7
-src-git luci https://github.com/Lienol/openwrt-luci.git^97bc582
-src-git lienol https://github.com/Lienol/openwrt-package^4ca667d
-src-git kenzo https://github.com/kenzok8/openwrt-packages^9240e73
