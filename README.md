@@ -1,12 +1,11 @@
 # newifi3-d2-openwrt
 
-新三路由器openwrt固件
-
- - Lienol分支：https://github.com/Lienol/openwrt
+> 适用于新三路由器openwrt固件
+>
 
  - coolsnowwolf分支：https://github.com/coolsnowwolf/lede
-
- - 2021.01.22最新编译
+ - 2021.04.09最新编译
+ - Screenshot文件夹为最新编译的预览截图
 
 ## 使用方法：
 
@@ -16,17 +15,18 @@
 
 ### 说明：
 
-Lienol分支的固件默认用的是passwall，coolsnowwolf分支的固件默认用的是SSR PLUS
+coolsnowwolf分支的固件默认用的是SSR PLUS
 
- 插件截图预览：
- ![enter image description here](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/ee96c5.png)
- ![enter image description here](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/20ae82.png)
- ![enter image description here](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/87307a.png)
- ![enter image description here](https://cdn.jsdelivr.net/gh/img-link/pic/2020/07/12/4cfa99.png)
+### 功能截图预览：
+
+![](/Screenshot/2021-04-09_144119.png)
+![](/Screenshot/2021-04-09_144159.png)
+![](/Screenshot/2021-04-09_144229.png)
+![](/Screenshot/2021-04-09_144249.png)
+![](/Screenshot/2021-04-09_144318.png)
+![](/Screenshot/2021-04-09_144347.png)
 
  **致谢：**
 
 https://github.com/coolsnowwolf/lede
-
-https://github.com/Lienol/openwrt
 
