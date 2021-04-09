@@ -21,6 +21,18 @@ Size: 36542
 SHA256sum: fbf8a2d6fad572bff4d2d5578a5bb2bf6723b7eaca8824a8008a8d8f02f52251
 Description:  Revive Netease Cloud Music (NodeJS)
 
+Package: baidupcs-web
+Version: 3.7.3-3
+Depends: libc
+License: Apache-2.0
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 4344603
+Filename: baidupcs-web_3.7.3-3_mipsel_24kc.ipk
+Size: 4346092
+SHA256sum: e5e70ce588a8a8e7421ffea1497ed6d921d1798a1490689b74c9f22a5201e97b
+Description:  BaiduPCS-Web is a web controller for BaiduPCS-Go
+
 Package: blkid
 Version: 2.35.1-2
 Depends: libc, libblkid1, libuuid1
@@ -128,10 +140,10 @@ Depends: libc, luci-base, luci, luci-compat
 License: GPLv3
 Section: luci
 Architecture: all
-Installed-Size: 1981
+Installed-Size: 1982
 Filename: default-settings_2-10_all.ipk
-Size: 2721
-SHA256sum: 36c71e0f9f2fff86ee0f381eb38da297b178247e783fab525b77cedfe564024b
+Size: 2717
+SHA256sum: 94afcb115a5bbee241f8e70bcfc04c5d346ecc3bd982b92f78cc7eb69886978e
 Description:  Language Support Packages.
 
 Package: dns2socks
@@ -258,8 +270,8 @@ CPE-ID: cpe:/a:iproute2_project:iproute2
 Architecture: mipsel_24kc
 Installed-Size: 162362
 Filename: ip-full_5.7.0-2_mipsel_24kc.ipk
-Size: 163248
-SHA256sum: 9011d06aa8bdcb58ec620bfdd3415ee02675ddd82a9b844bbdb99a70ababea94
+Size: 163255
+SHA256sum: 6a55cb94d245ab8f59619ee6b061b5377bffee3fa6855c158a757c4a1fd2f78f
 Description:  Routing control utility (Full)
 
 Package: ipset
@@ -268,10 +280,10 @@ Depends: libc, kmod-ipt-ipset, libmnl0, libipset13
 License: GPL-2.0
 Section: net
 Architecture: mipsel_24kc
-Installed-Size: 1376
+Installed-Size: 1379
 Filename: ipset_7.4-1_mipsel_24kc.ipk
-Size: 2134
-SHA256sum: 98c381c4bc299ac2af9c93959797c26614117d4f012a90d80cf1bbbc3bab97d6
+Size: 2141
+SHA256sum: 3e2b7cb60de74a69be97592f8b562883582fee3b149e02d45ea2874f99faa4f4
 Description:  IPset administration utility
 
 Package: iptables-mod-fullconenat
@@ -282,8 +294,8 @@ Section: net
 Architecture: mipsel_24kc
 Installed-Size: 2291
 Filename: iptables-mod-fullconenat_2019-10-21-0cf3b48f-3_mipsel_24kc.ipk
-Size: 3083
-SHA256sum: a4ae7b9b65971c2f412f8367a74161db5b8a120973adef79b2d4a84e00e22244
+Size: 3081
+SHA256sum: 8fa0db0051ec5e9a9dde9d9ecdfb5841c16f638764ffe0f53db669c2880c0696
 Description:  FULLCONENAT iptables extension
 
 Package: jshn
@@ -403,10 +415,10 @@ Provides: libipset
 License: GPL-2.0
 Section: net
 Architecture: mipsel_24kc
-Installed-Size: 40125
+Installed-Size: 40127
 Filename: libipset13_7.4-1_mipsel_24kc.ipk
-Size: 40675
-SHA256sum: d962e5c5f960d87f942d6d98ae1d7ef4b5de8ce4348f3984fcc28f06c94993e4
+Size: 40672
+SHA256sum: e324d1dbf29ec1940c55c8c52a7edfb467a994e1e944b5a8edfdff59fccb4b96
 Description:  IPset administration utility
 
 Package: libjson-c4
@@ -452,17 +464,17 @@ Description:  Lua is a powerful light-weight programming language designed for e
  This package contains the Lua shared libraries, needed by other programs.
 
 Package: libmbedtls12
-Version: 2.16.9-1
+Version: 2.16.10-1
 Depends: libc
 Provides: libmbedtls
 License: GPL-2.0-or-later
 Section: libs
 CPE-ID: cpe:/a:arm:mbed_tls
 Architecture: mipsel_24kc
-Installed-Size: 178234
-Filename: libmbedtls12_2.16.9-1_mipsel_24kc.ipk
-Size: 178749
-SHA256sum: 640a8580d848516c561ddfd4dafc9062fd8ef4c8f3faba29760712b2c40ce816
+Installed-Size: 178803
+Filename: libmbedtls12_2.16.10-1_mipsel_24kc.ipk
+Size: 179264
+SHA256sum: 5440c70c2dbdadf3931395886ddc026504347eab94b4868c0bf72b94287b1cfc
 Description:  The aim of the mbedtls project is to provide a quality, open-source
  cryptographic library written in C and targeted at embedded systems.
  This package contains the mbedtls library.
@@ -799,6 +811,17 @@ Size: 1936
 SHA256sum: 88185a2b6964a5ad283c95b33c68bfbf53a71917135979b7fb27b8449e7853bf
 Description:  LuCI support for Scheduled Reboot
 
+Package: luci-app-baidupcs-web
+Version: 1.0-5
+Depends: libc, baidupcs-web, wget, openssl-util
+Section: luci
+Architecture: all
+Installed-Size: 2595
+Filename: luci-app-baidupcs-web_1.0-5_all.ipk
+Size: 3425
+SHA256sum: 5f23c3fbacab0b05236e5a8936e85c9d4b468720b3a37b579c05da06a5cf43ce
+Description:  LuCI support for BaiduPCS-Go
+
 Package: luci-app-diskman
 Version: v0.2.10-beta
 Depends: libc, e2fsprogs, parted, smartmontools, blkid
@@ -891,25 +914,25 @@ SHA256sum: 02a88c5074b255cbf054897faf98dee0d042baab6862eb3ece7dfcf66102bf2a
 Description:  LuCI support for mt wifi driver
 
 Package: luci-app-n2n_v2
-Version: 2.8.0-2
+Version: 2.8.1-3
 Depends: libc, n2n-edge, n2n-supernode
 Section: luci
 Architecture: all
-Installed-Size: 2297
-Filename: luci-app-n2n_v2_2.8.0-2_all.ipk
-Size: 3068
-SHA256sum: 99cb8979e3f20bebf0962c09b9ca0e4ee9d8489f6c0b930693aaa8c8a52275ce
+Installed-Size: 2228
+Filename: luci-app-n2n_v2_2.8.1-3_all.ipk
+Size: 2997
+SHA256sum: 20303be742b70a36fa549c3fa0a37acf402c402fbcb6b2cd48287c9515afc595
 Description:  n2n_v2 VPN Configuration module
 
 Package: luci-app-nft-qos
-Version: git-21.088.15737-b1c24df-1
+Version: git-21.098.30128-c41c174-1
 Depends: libc, nft-qos
 Section: luci
 Architecture: all
-Installed-Size: 4020
-Filename: luci-app-nft-qos_git-21.088.15737-b1c24df-1_all.ipk
-Size: 4694
-SHA256sum: b62ba8117d9fb7d921f70c9eea7afcce483113bb319244b89f7cccf2ca84471d
+Installed-Size: 4019
+Filename: luci-app-nft-qos_git-21.098.30128-c41c174-1_all.ipk
+Size: 4691
+SHA256sum: 58857bc89579151f8f3c680a661856a0f264c9460bb79a4de778f32a176d147c
 Description:  Qos over Nftables
 
 Package: luci-app-nps
@@ -975,8 +998,8 @@ Section: luci
 Architecture: all
 Installed-Size: 2294
 Filename: luci-app-vlmcsd_1.0-5_all.ipk
-Size: 3044
-SHA256sum: ac1c0cbefefdb26642a03b0a6240e9b5dbebf5ba2e39aaff02e1442d925e4a29
+Size: 3043
+SHA256sum: cb43a70ca8ca1e69db314764a9ad9ec1b1843b114ee2894a471d801cc0db57c5
 Description:  LuCI page for KMS
 
 Package: luci-app-vsftpd
@@ -1102,25 +1125,25 @@ SHA256sum: 30997a90f30717db88d4e99cc83fbb549780297f3b00b90bcfa59b7751a72afe
 Description:  Translation for luci-app-guest-wifi - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-n2n_v2-zh-cn
-Version: 2.8.0-2
+Version: 2.8.1-3
 Depends: libc, luci-app-n2n_v2
 Section: luci
 Architecture: all
-Installed-Size: 1046
-Filename: luci-i18n-n2n_v2-zh-cn_2.8.0-2_all.ipk
-Size: 1860
-SHA256sum: 2be070d5209ed790a0d7882a0a6edf967cbae069d3f8dbf62850b4e7ffdc7544
+Installed-Size: 1101
+Filename: luci-i18n-n2n_v2-zh-cn_2.8.1-3_all.ipk
+Size: 1921
+SHA256sum: 6f87ed62a0dd25f4603d0af020f29d9bace483acfa6138e47a68294828253704
 Description:  Translation for luci-app-n2n_v2 - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-nft-qos-zh-cn
-Version: git-21.088.15737-b1c24df-1
+Version: git-21.098.30128-c41c174-1
 Depends: libc, luci-app-nft-qos
 Section: luci
 Architecture: all
-Installed-Size: 1755
-Filename: luci-i18n-nft-qos-zh-cn_git-21.088.15737-b1c24df-1_all.ipk
-Size: 2592
-SHA256sum: 9994487a5932930699538e339f4700692b4f1d2b51f87686905768e29adae31f
+Installed-Size: 1757
+Filename: luci-i18n-nft-qos-zh-cn_git-21.098.30128-c41c174-1_all.ipk
+Size: 2594
+SHA256sum: ee19afa7ad11a217818b0acc21b35394f9284ee6b4f68a17ee3683c1c38800ce
 Description:  Translation for luci-app-nft-qos - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-nps-zh-cn
@@ -1184,10 +1207,10 @@ Version: 1.0-5
 Depends: libc, luci-app-vlmcsd
 Section: luci
 Architecture: all
-Installed-Size: 804
+Installed-Size: 802
 Filename: luci-i18n-vlmcsd-zh-cn_1.0-5_all.ipk
-Size: 1607
-SHA256sum: 26f9f2f0684b5c54a03e8922904e5f48068d10225cdccb9d9b4da9fb4267395a
+Size: 1606
+SHA256sum: 3276e36eb8643aa279f91f6d7c2e48b004eae3d7f08f76bafec66c38858d4f44
 Description:  Translation for luci-app-vlmcsd - 简体中文 (Simplified Chinese)
 
 Package: luci-i18n-vsftpd-zh-cn
@@ -1234,6 +1257,17 @@ Size: 2991
 SHA256sum: 87fe666876d98fe35991d6e7f663d4530d6c8bd39185903178d208cbdc52d3d3
 Description:  luci-lib-fs
 
+Package: luci-theme-argon
+Version: 1.0-2
+Depends: libc
+Section: luci
+Architecture: all
+Installed-Size: 69549
+Filename: luci-theme-argon_1.0-2_all.ipk
+Size: 70183
+SHA256sum: 17fe664e48e85bd015b2e689788a5c7dacc01df6d93df8d21d7552e1aef7e4a2
+Description:  Argon Theme
+
 Package: microsocks
 Version: 1.0.2-1
 Depends: libc
@@ -1259,27 +1293,27 @@ SHA256sum: a6193fd55deb476356b876d78cf52bbf9ecd03f1c5766056989593b1a6af3e76
 Description:  MT_WiFi auto config for mt7603/mt7612/mt7615 chips
 
 Package: n2n-edge
-Version: 2.8.0_git-99e56e9f3c34c49eeb297971d41150b433489120-3
+Version: 2.8.1_git-99e56e9f3c34c49eeb297971d41150b433489120-1
 Depends: libc, kmod-tun, resolveip, libopenssl1.1, libcap, libzstd
 License: GPL3
 Section: net
 Architecture: mipsel_24kc
-Installed-Size: 39162
-Filename: n2n-edge_2.8.0_git-99e56e9f3c34c49eeb297971d41150b433489120-3_mipsel_24kc.ipk
-Size: 39979
-SHA256sum: b4633963bd054d92a260b959421fbd718dbc05dc23cffa13ffc7e4c7fde3f048
+Installed-Size: 39391
+Filename: n2n-edge_2.8.1_git-99e56e9f3c34c49eeb297971d41150b433489120-1_mipsel_24kc.ipk
+Size: 40234
+SHA256sum: 6e36bddbf89cb20bafa439548c001c55d3fe5f8adfa459e290e511e2b69e963d
 Description:  The client node for the N2N infrastructure
 
 Package: n2n-supernode
-Version: 2.8.0_git-99e56e9f3c34c49eeb297971d41150b433489120-3
+Version: 2.8.1_git-99e56e9f3c34c49eeb297971d41150b433489120-1
 Depends: libc, libcap
 License: GPL3
 Section: net
 Architecture: mipsel_24kc
-Installed-Size: 17952
-Filename: n2n-supernode_2.8.0_git-99e56e9f3c34c49eeb297971d41150b433489120-3_mipsel_24kc.ipk
-Size: 18763
-SHA256sum: 5bbd624c7e565cf27f9902053468cb7e81dd1463c746cd79bc67c9bbc63c9d0b
+Installed-Size: 17951
+Filename: n2n-supernode_2.8.1_git-99e56e9f3c34c49eeb297971d41150b433489120-1_mipsel_24kc.ipk
+Size: 18762
+SHA256sum: 697443f8d64bf71200b866204eae349bdab4bc0ac378896b07d4d18c88c3cf32
 Description:  The supernode for the N2N infrastructure
 
 Package: netifd
@@ -1371,8 +1405,8 @@ Essential: yes
 Architecture: mipsel_24kc
 Installed-Size: 57792
 Filename: opkg_2020-05-07-f2166a89-1_mipsel_24kc.ipk
-Size: 58889
-SHA256sum: 6673ce531c2103f34889c8a73779ab66a625a44f27966b3eae4cf2fce504b483
+Size: 58886
+SHA256sum: 6e35b5d90e7a34bab5229088d73736785dfa4ffadf65626c2bcf221dc6bc0039
 Description:  Lightweight package management system
  opkg is the opkg Package Management System, for handling
  installation and removal of packages on a system. It can
@@ -1417,10 +1451,10 @@ License: BSD-4-Clause
 Section: net
 CPE-ID: cpe:/a:samba:ppp
 Architecture: mipsel_24kc
-Installed-Size: 9484
+Installed-Size: 9486
 Filename: ppp-mod-pppoe_2.4.8-5_mipsel_24kc.ipk
-Size: 10280
-SHA256sum: 93de74ed8fb77b71745ba66361cc5bd124d728716807196424f9cbf56044aa08
+Size: 10283
+SHA256sum: b4d43904fa0fac3d5771e9ceb93bd5b2f34603a57ae7bde80ed65f818dabc845
 Description:  This package contains a PPPoE (PPP over Ethernet) plugin for ppp.
 
 Package: ppp
@@ -1430,10 +1464,10 @@ License: BSD-4-Clause
 Section: net
 CPE-ID: cpe:/a:samba:ppp
 Architecture: mipsel_24kc
-Installed-Size: 112901
+Installed-Size: 112902
 Filename: ppp_2.4.8-5_mipsel_24kc.ipk
-Size: 113484
-SHA256sum: f58cfe05d12647aba9141ac432a68f2d295d442674e8d6bec500ab96ed6fb886
+Size: 113474
+SHA256sum: 9f6743bfdfbd27507ab377d85426574e12e4db81734acde52a142b92dbd9b9ed
 Description:  This package contains the PPP (Point-to-Point Protocol) daemon.
 
 Package: procd
@@ -1557,10 +1591,10 @@ License: GPL-2.0
 Section: net
 CPE-ID: cpe:/a:iproute2_project:iproute2
 Architecture: mipsel_24kc
-Installed-Size: 141557
+Installed-Size: 141558
 Filename: tc_5.7.0-2_mipsel_24kc.ipk
-Size: 142402
-SHA256sum: 410111f6a0a1f97ba6a059801d0f1a42b0f50b179fd2d41c73ad92866372411c
+Size: 142410
+SHA256sum: fe05ed73144888a80c2983c3f88a85fe29c1185cc37fc982b70fced7c935a34d
 Description:  Traffic control utility
 
 Package: terminfo
