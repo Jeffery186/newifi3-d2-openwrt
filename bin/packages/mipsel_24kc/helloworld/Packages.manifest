@@ -14,29 +14,29 @@ SHA256sum: 82f7ab34ba62b63ed0bbff32a4bca674037ecc60f189bf4896bf20f103cd5cac
 Description:  Utility for converting iptables (REDIRECT/TPROXY) to SOCKS5.
 
 Package: luci-app-ssr-plus
-Version: 183-9
+Version: 184-1
 Depends: libc, shadowsocksr-libev-alt, ipset, ip-full, iptables-mod-tproxy, dnsmasq-full, coreutils, coreutils-base64, pdnsd-alt, wget-ssl, lua, libuci-lua, microsocks, dns2socks, shadowsocksr-libev-ssr-local, tcping, resolveip, xray-core
 Source: feeds/helloworld/luci-app-ssr-plus
 SourceName: luci-app-ssr-plus
 Section: luci
 Architecture: all
-Installed-Size: 191326
-Filename: luci-app-ssr-plus_183-9_all.ipk
-Size: 191464
-SHA256sum: dc16e3bab3bac1b52e3bf6de2422f43e81b948c92aec4d79c761f5459b615e91
+Installed-Size: 192182
+Filename: luci-app-ssr-plus_184-1_all.ipk
+Size: 192153
+SHA256sum: 0d4dd635de8e34965ddee7f2f3fa18deb6f0bfc8fb16b49e5d0d713f7c16e5e5
 Description:  SS/SSR/V2Ray/Trojan/NaiveProxy/Socks5/Tun LuCI interface
 
 Package: luci-i18n-ssr-plus-zh-cn
-Version: 183-9
+Version: 184-1
 Depends: libc, luci-app-ssr-plus
 Source: feeds/helloworld/luci-app-ssr-plus
 SourceName: luci-i18n-ssr-plus-zh-cn
 Section: luci
 Architecture: all
-Installed-Size: 6376
-Filename: luci-i18n-ssr-plus-zh-cn_183-9_all.ipk
-Size: 7220
-SHA256sum: 6c06159939b404dd582d058d8cf713af4f109103fc32bc723b8a8fadb7128948
+Installed-Size: 6417
+Filename: luci-i18n-ssr-plus-zh-cn_184-1_all.ipk
+Size: 7261
+SHA256sum: 73012a7b1e4557f928c89f6962759c5d2b5024f13515ee624232e0104b3bcf08
 Description:  Translation for luci-app-ssr-plus - 简体中文 (Simplified Chinese)
 
 Package: tcping
@@ -68,7 +68,6 @@ Description:  An unidentifiable mechanism that helps you bypass GFW. It's compat
 Package: xray-core
 Version: 1.4.2-1
 Depends: libc, ca-bundle
-Provides: v2ray-core
 Source: feeds/helloworld/xray-core
 SourceName: xray-core
 License: MPL-2.0
@@ -76,10 +75,10 @@ LicenseFiles: LICENSE
 Section: net
 Maintainer: Tianling Shen <cnsztl@project-openwrt.eu.org>
 Architecture: mipsel_24kc
-Installed-Size: 3856685
+Installed-Size: 3857605
 Filename: xray-core_1.4.2-1_mipsel_24kc.ipk
-Size: 3858234
-SHA256sum: 538b7fdcb7cf9709ebe1287ddf4b5020d49d0773defd3058c46f744812f5bad0
+Size: 3859153
+SHA256sum: 3a91e4183381fa372162599a993ac43910228e775a023097f7665e98d2042dfd
 Description:  Xray, Penetrates Everything. Also the best v2ray-core, with XTLS support. Fully compatible configuration.
  It secures your network connections and thus protects your privacy.
 

@@ -1,3 +1,46 @@
+Package: attendedsysupgrade-common
+Version: 0.2-1
+Depends: libc, rpcd, rpcd-mod-rpcsys
+License: GPL-2.0
+Section: utils
+Architecture: all
+Installed-Size: 515
+Filename: attendedsysupgrade-common_0.2-1_all.ipk
+Size: 1586
+SHA256sum: ace39fc1865863f3c9fccf6b156192524f1ca8ed71bdf91686c3742b93eef282
+Description:  Common needed files for attendedsysupgrade tool
+ 
+ Manages dependencies and brings settings used by clients.
+ 
+ UCI options:
+ 
+ attendedsysupgrade.server.url
+ URL of compatible upgrade server [1]
+ 
+ attendedsysupgrade.client.upgrade_packages
+ Client should request image also if no new release but new packages upgrade are available.
+ 
+ attendedsysupgrade.client.advanced_mode
+ Offer advanced options like editing packages before request and show additional information.
+ 
+ attendedsysupgrade.client.auto_search
+ Tells the client to automattically search for upgrades
+ This can be done when opening luci or login in to console - depends on client.
+ 
+ [1]: https://github.com/aparcar/gsoc17-attended-sysupgrade
+
+Package: cgi-io
+Version: 19
+Depends: libc, libubox20191228, libubus20191227
+License: GPL-2.0-or-later
+Section: net
+Architecture: mipsel_24kc
+Installed-Size: 7529
+Filename: cgi-io_19_mipsel_24kc.ipk
+Size: 8311
+SHA256sum: 02d1582fbbe85fe081d1ea07dd60aaf3a4e420002b13cd305e335dbb47efbc70
+Description:  This package contains an cgi utility that is useful for up/downloading files
+
 Package: coreutils-base64
 Version: 8.32-1
 Depends: libc, coreutils
@@ -292,6 +335,54 @@ Description:  p910nd is a small daemon that copies any data received on
  could not be used on diskful hosts. Port 9100 is copied
  to /dev/lp0, 9101 to /dev/lp1 and 9102 to /dev/lp2. The
  default is port 9100 to /dev/lp0.
+
+Package: rp-pppoe-common
+Version: 3.14-1
+Depends: libc, ppp
+License: LGPL-2.0-or-later
+Section: net
+CPE-ID: cpe:/a:roaring_penguin:pppoe
+Architecture: mipsel_24kc
+Installed-Size: 402
+Filename: rp-pppoe-common_3.14-1_mipsel_24kc.ipk
+Size: 1283
+SHA256sum: 5d584526e3e5ba13cd561f071fa8e683dbbca40a97c853f296441efa77d9f6e6
+Description:  Dubbed RP-PPPoE, this open-source product is ideal for Linux users with
+ a DSL "modem" whose Internet service provider uses PPPoE.
+ 
+ This package contains files common to server and relay.
+
+Package: rp-pppoe-relay
+Version: 3.14-1
+Depends: libc, rp-pppoe-common
+License: LGPL-2.0-or-later
+Section: net
+CPE-ID: cpe:/a:roaring_penguin:pppoe
+Architecture: mipsel_24kc
+Installed-Size: 11116
+Filename: rp-pppoe-relay_3.14-1_mipsel_24kc.ipk
+Size: 11943
+SHA256sum: 07ac8066c7f5cd06a152537937524cb09e7e43ee854999fa20f67afb725d53b0
+Description:  Dubbed RP-PPPoE, this open-source product is ideal for Linux users with
+ a DSL "modem" whose Internet service provider uses PPPoE.
+ 
+ This package contains pppoe-relay.
+
+Package: rp-pppoe-server
+Version: 3.14-1
+Depends: libc, rp-pppoe-common, ppp-mod-pppoe
+License: LGPL-2.0-or-later
+Section: net
+CPE-ID: cpe:/a:roaring_penguin:pppoe
+Architecture: mipsel_24kc
+Installed-Size: 20194
+Filename: rp-pppoe-server_3.14-1_mipsel_24kc.ipk
+Size: 21113
+SHA256sum: ad84db47c1530b312b076674c53f66a005797ba8070a69f4650d988f7938223c
+Description:  Dubbed RP-PPPoE, this open-source product is ideal for Linux users with
+ a DSL "modem" whose Internet service provider uses PPPoE.
+ 
+ This package contains pppoe-server.
 
 Package: shadowsocks-libev-ss-local
 Version: 3.3.5-4
