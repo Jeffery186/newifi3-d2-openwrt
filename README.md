@@ -63,3 +63,8 @@ coolsnowwolf分支的固件默认用的是SSR PLUS
 
 https://github.com/coolsnowwolf/lede
 
+## 更新日志：
+
+#### 2021年7月17日
+
+- 添加nfs内核(到Actions里面下载)
