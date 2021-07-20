@@ -1,4 +1,4 @@
-name: Build-OpenWrt-ImmortalWrt
+name: Build-OpenWrt-ImmortalWrt-Actions
 
 on:
   push:
@@ -52,7 +52,7 @@ jobs:
     - name: Start Build
       run: |
         cd /home/runner/immortalwrt
-        mv .config .config_default
+        mv .config_immortalwrt .config_default
         rm -f .config.old
         config_names="$(ls .config*)"
         for i in $config_names;do mv -f $i .config; make defconfig; make -j$[$(nproc)+1]; rm -rf build_dir/target* build_dir/toolchain* staging_dir/target* staging_dir/toolchain*; done
