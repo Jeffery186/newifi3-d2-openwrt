@@ -54,7 +54,7 @@ jobs:
         cd /home/runner/immortalwrt
         mv .config_immortalwrt .config
         rm -f .config.old
-        make defconfig; make -j$[$(nproc)+1]; rm -rf build_dir/target* build_dir/toolchain* staging_dir/target* staging_dir/toolchain*; done
+        make defconfig; make -j$[$(nproc)+1]; rm -rf build_dir/target* build_dir/toolchain* staging_dir/target* staging_dir/toolchain*
     - name: After Build
       run: |
         /bin/bash /home/runner/immortalwrt/after_build.sh
