@@ -67,4 +67,4 @@ https://github.com/coolsnowwolf/lede
 
 #### 2021年7月17日
 
-- 添加nfs内核(到Actions里面下载)
+- 添加nfs内核
