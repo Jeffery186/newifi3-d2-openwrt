@@ -26,3 +26,8 @@ make menuconfig
 make
 ```
 
+```bash
+git status
+git pull
+```
+
