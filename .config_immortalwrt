@@ -1666,7 +1666,7 @@ CONFIG_PACKAGE_libgcc=y
 # CONFIG_PACKAGE_libgomp is not set
 CONFIG_PACKAGE_libpthread=y
 CONFIG_PACKAGE_librt=y
-CONFIG_PACKAGE_libstdcpp=y
+# CONFIG_PACKAGE_libstdcpp is not set
 CONFIG_PACKAGE_logd=y
 CONFIG_PACKAGE_mtd=y
 CONFIG_PACKAGE_netifd=y
@@ -2052,7 +2052,7 @@ CONFIG_PACKAGE_kmod-dm=y
 # CONFIG_PACKAGE_kmod-md-mod is not set
 # CONFIG_PACKAGE_kmod-nbd is not set
 # CONFIG_PACKAGE_kmod-scsi-cdrom is not set
-# CONFIG_PACKAGE_kmod-scsi-core is not set
+CONFIG_PACKAGE_kmod-scsi-core=y
 # CONFIG_PACKAGE_kmod-scsi-generic is not set
 # CONFIG_PACKAGE_kmod-scsi-tape is not set
 # end of Block Devices
@@ -2712,9 +2712,9 @@ CONFIG_PACKAGE_kmod-usb-printer=y
 # CONFIG_PACKAGE_kmod-usb-serial-simple is not set
 # CONFIG_PACKAGE_kmod-usb-serial-ti-usb is not set
 # CONFIG_PACKAGE_kmod-usb-serial-visor is not set
-# CONFIG_PACKAGE_kmod-usb-storage is not set
-# CONFIG_PACKAGE_kmod-usb-storage-extras is not set
-# CONFIG_PACKAGE_kmod-usb-storage-uas is not set
+CONFIG_PACKAGE_kmod-usb-storage=y
+CONFIG_PACKAGE_kmod-usb-storage-extras=y
+CONFIG_PACKAGE_kmod-usb-storage-uas=y
 # CONFIG_PACKAGE_kmod-usb-uhci is not set
 # CONFIG_PACKAGE_kmod-usb-wdm is not set
 # CONFIG_PACKAGE_kmod-usb-yealink is not set
@@ -3277,7 +3277,21 @@ CONFIG_PACKAGE_luci-lib-fs=y
 # CONFIG_PACKAGE_libmariadb is not set
 # CONFIG_PACKAGE_libpq is not set
 # CONFIG_PACKAGE_libpqxx is not set
-# CONFIG_PACKAGE_libsqlite3 is not set
+CONFIG_PACKAGE_libsqlite3=y
+
+#
+# Configuration
+#
+CONFIG_SQLITE3_DYNAMIC_EXTENSIONS=y
+CONFIG_SQLITE3_ENABLE_COLUMN_METADATA=y
+CONFIG_SQLITE3_FTS3=y
+CONFIG_SQLITE3_FTS4=y
+CONFIG_SQLITE3_FTS5=y
+CONFIG_SQLITE3_JSON1=y
+CONFIG_SQLITE3_RTREE=y
+# CONFIG_SQLITE3_SESSION is not set
+# end of Configuration
+
 # CONFIG_PACKAGE_pgsqlodbc is not set
 # CONFIG_PACKAGE_psqlodbca is not set
 # CONFIG_PACKAGE_psqlodbcw is not set
@@ -3804,9 +3818,7 @@ CONFIG_PACKAGE_libxtables=y
 #
 # CONFIG_PACKAGE_libgnutls is not set
 # CONFIG_PACKAGE_libgnutls-dane is not set
-CONFIG_PACKAGE_libmbedtls=y
-# CONFIG_LIBMBEDTLS_DEBUG_C is not set
-# CONFIG_LIBMBEDTLS_HKDF_C is not set
+# CONFIG_PACKAGE_libmbedtls is not set
 # CONFIG_PACKAGE_libnss is not set
 CONFIG_PACKAGE_libopenssl=y
 
@@ -3932,71 +3944,10 @@ CONFIG_WOLFSSL_HAS_NO_HW=y
 # CONFIG_PACKAGE_argp-standalone is not set
 # CONFIG_PACKAGE_bind-libs is not set
 # CONFIG_PACKAGE_bluez-libs is not set
-CONFIG_PACKAGE_boost=y
+# CONFIG_PACKAGE_boost is not set
 # CONFIG_boost-context-exclude is not set
 # CONFIG_boost-coroutine-exclude is not set
 # CONFIG_boost-fiber-exclude is not set
-
-#
-# Select Boost Options
-#
-
-#
-# Boost compilation options.
-#
-# CONFIG_boost-compile-visibility-global is not set
-# CONFIG_boost-compile-visibility-protected is not set
-CONFIG_boost-compile-visibility-hidden=y
-# CONFIG_boost-shared-libs is not set
-# CONFIG_boost-static-libs is not set
-CONFIG_boost-static-and-shared-libs=y
-CONFIG_boost-runtime-shared=y
-CONFIG_boost-variant-release=y
-# CONFIG_boost-variant-debug is not set
-# CONFIG_boost-variant-profile is not set
-# CONFIG_boost-use-name-tags is not set
-# end of Select Boost Options
-
-#
-# Select Boost libraries
-#
-
-#
-# Libraries
-#
-# CONFIG_boost-libs-all is not set
-# CONFIG_boost-test-pkg is not set
-# CONFIG_boost-graph-parallel is not set
-# CONFIG_PACKAGE_boost-atomic is not set
-# CONFIG_PACKAGE_boost-chrono is not set
-# CONFIG_PACKAGE_boost-container is not set
-# CONFIG_PACKAGE_boost-context is not set
-# CONFIG_PACKAGE_boost-contract is not set
-# CONFIG_PACKAGE_boost-coroutine is not set
-CONFIG_PACKAGE_boost-date_time=y
-# CONFIG_PACKAGE_boost-fiber is not set
-# CONFIG_PACKAGE_boost-filesystem is not set
-# CONFIG_PACKAGE_boost-graph is not set
-# CONFIG_PACKAGE_boost-iostreams is not set
-# CONFIG_PACKAGE_boost-json is not set
-# CONFIG_PACKAGE_boost-locale is not set
-# CONFIG_PACKAGE_boost-log is not set
-# CONFIG_PACKAGE_boost-math is not set
-# CONFIG_PACKAGE_boost-nowide is not set
-CONFIG_PACKAGE_boost-program_options=y
-# CONFIG_PACKAGE_boost-python3 is not set
-# CONFIG_PACKAGE_boost-random is not set
-# CONFIG_PACKAGE_boost-regex is not set
-# CONFIG_PACKAGE_boost-serialization is not set
-# CONFIG_PACKAGE_boost-wserialization is not set
-# CONFIG_PACKAGE_boost-stacktrace is not set
-CONFIG_PACKAGE_boost-system=y
-# CONFIG_PACKAGE_boost-thread is not set
-# CONFIG_PACKAGE_boost-timer is not set
-# CONFIG_PACKAGE_boost-type_erasure is not set
-# CONFIG_PACKAGE_boost-wave is not set
-# end of Select Boost libraries
-
 # CONFIG_PACKAGE_cJSON is not set
 # CONFIG_PACKAGE_ccid is not set
 # CONFIG_PACKAGE_check is not set
@@ -4154,7 +4105,9 @@ CONFIG_PACKAGE_libev=y
 # CONFIG_PACKAGE_libftdi1 is not set
 # CONFIG_PACKAGE_libgabe is not set
 # CONFIG_PACKAGE_libgcrypt is not set
-# CONFIG_PACKAGE_libgd is not set
+CONFIG_PACKAGE_libgd=y
+# CONFIG_LIBGD_TIFF is not set
+# CONFIG_LIBGD_FREETYPE is not set
 # CONFIG_PACKAGE_libgd-full is not set
 # CONFIG_PACKAGE_libgdbm is not set
 # CONFIG_PACKAGE_libgee is not set
@@ -4188,7 +4141,7 @@ CONFIG_PACKAGE_libgmp=y
 # CONFIG_PACKAGE_libipfs-http-client is not set
 # CONFIG_PACKAGE_libiw is not set
 CONFIG_PACKAGE_libiwinfo=y
-# CONFIG_PACKAGE_libjpeg-turbo is not set
+CONFIG_PACKAGE_libjpeg-turbo=y
 CONFIG_PACKAGE_libjson-c=y
 CONFIG_PACKAGE_libkeyutils=y
 # CONFIG_PACKAGE_libkmod is not set
@@ -4288,7 +4241,7 @@ CONFIG_PACKAGE_libpcre=y
 # CONFIG_PACKAGE_libpfring is not set
 # CONFIG_PACKAGE_libpkcs11-spy is not set
 # CONFIG_PACKAGE_libpkgconf is not set
-# CONFIG_PACKAGE_libpng is not set
+CONFIG_PACKAGE_libpng=y
 # CONFIG_PACKAGE_libpopt is not set
 # CONFIG_PACKAGE_libpri is not set
 # CONFIG_PACKAGE_libprotobuf-c is not set
@@ -4403,7 +4356,7 @@ CONFIG_PACKAGE_libuv=y
 # CONFIG_PACKAGE_libvorbis is not set
 # CONFIG_PACKAGE_libvorbisidec is not set
 # CONFIG_PACKAGE_libvpx is not set
-# CONFIG_PACKAGE_libwebp is not set
+CONFIG_PACKAGE_libwebp=y
 CONFIG_PACKAGE_libwebsockets-full=y
 # CONFIG_PACKAGE_libwebsockets-mbedtls is not set
 # CONFIG_PACKAGE_libwebsockets-openssl is not set
@@ -4723,14 +4676,14 @@ CONFIG_PACKAGE_luci-app-ssr-plus=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Redsocks2 is not set
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Libev_Server is not set
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server is not set
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server is not set
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_Obfs=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Simple_Obfs is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Trojan is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray_Plugin is not set
 CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
 # CONFIG_PACKAGE_luci-app-ssrserver-python is not set
@@ -4766,7 +4719,7 @@ CONFIG_PACKAGE_luci-app-usb-printer=y
 # CONFIG_PACKAGE_luci-app-verysync is not set
 CONFIG_PACKAGE_luci-app-vlmcsd=y
 # CONFIG_PACKAGE_luci-app-vnstat is not set
-# CONFIG_PACKAGE_luci-app-vnstat2 is not set
+CONFIG_PACKAGE_luci-app-vnstat2=y
 # CONFIG_PACKAGE_luci-app-vpn-policy-routing is not set
 # CONFIG_PACKAGE_luci-app-vpnbypass is not set
 # CONFIG_PACKAGE_luci-app-vsftpd is not set
@@ -5190,6 +5143,38 @@ CONFIG_PACKAGE_luci-i18n-uhttpd-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-uhttpd-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-usb-printer-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-vnstat2-ar is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-bg is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-bn is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-ca is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-cs is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-de is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-el is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-en is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-es is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-fi is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-fr is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-he is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-hi is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-hu is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-it is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-ja is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-ko is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-mr is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-ms is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-no is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-pl is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-pt is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-pt-br is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-ro is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-ru is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-sk is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-sv is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-tr is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-uk is not set
+# CONFIG_PACKAGE_luci-i18n-vnstat2-vi is not set
+CONFIG_PACKAGE_luci-i18n-vnstat2-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-vnstat2-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-webadmin-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-weburl-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-wol-ar is not set
@@ -6062,9 +6047,9 @@ CONFIG_PACKAGE_pdnsd-alt=y
 # CONFIG_PACKAGE_radicale2 is not set
 # CONFIG_PACKAGE_radicale2-examples is not set
 # CONFIG_PACKAGE_redsocks2 is not set
-CONFIG_PACKAGE_shadowsocks-libev-config=y
-CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
-CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
+# CONFIG_PACKAGE_shadowsocks-libev-config is not set
+# CONFIG_PACKAGE_shadowsocks-libev-ss-local is not set
+# CONFIG_PACKAGE_shadowsocks-libev-ss-redir is not set
 # CONFIG_PACKAGE_shadowsocks-libev-ss-rules is not set
 # CONFIG_PACKAGE_shadowsocks-libev-ss-server is not set
 # CONFIG_PACKAGE_shadowsocks-libev-ss-tunnel is not set
@@ -6073,9 +6058,9 @@ CONFIG_PACKAGE_shadowsocks-rust-sslocal=y
 # CONFIG_PACKAGE_shadowsocks-rust-ssserver is not set
 # CONFIG_PACKAGE_shadowsocks-rust-ssurl is not set
 CONFIG_PACKAGE_shadowsocksr-libev-ssr-check=y
-CONFIG_PACKAGE_shadowsocksr-libev-ssr-local=y
+# CONFIG_PACKAGE_shadowsocksr-libev-ssr-local is not set
 # CONFIG_PACKAGE_shadowsocksr-libev-ssr-nat is not set
-CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir=y
+# CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir is not set
 # CONFIG_PACKAGE_shadowsocksr-libev-ssr-server is not set
 # CONFIG_PACKAGE_sockd is not set
 # CONFIG_PACKAGE_socksify is not set
@@ -6083,7 +6068,7 @@ CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir=y
 # CONFIG_PACKAGE_squid is not set
 # CONFIG_PACKAGE_srelay is not set
 # CONFIG_PACKAGE_tinyproxy is not set
-CONFIG_PACKAGE_trojan=y
+# CONFIG_PACKAGE_trojan is not set
 # CONFIG_PACKAGE_trojan-go is not set
 # CONFIG_TROJAN_GO_COMPRESS_GOPROXY is not set
 CONFIG_TROJAN_GO_COMPRESS_UPX=y
@@ -6274,7 +6259,7 @@ CONFIG_HYSTERIA_COMPRESS_UPX=y
 CONFIG_PACKAGE_ipset=y
 # CONFIG_PACKAGE_ipset-dns is not set
 # CONFIG_PACKAGE_ipset-lists is not set
-CONFIG_PACKAGE_ipt2socks=y
+# CONFIG_PACKAGE_ipt2socks is not set
 # CONFIG_PACKAGE_ipt2socks-alt is not set
 # CONFIG_PACKAGE_iptraf-ng is not set
 # CONFIG_PACKAGE_iputils-arping is not set
@@ -6410,7 +6395,7 @@ CONFIG_RPCBIND_RMTCALLS=y
 # CONFIG_PACKAGE_seafile-server-fuse is not set
 # CONFIG_PACKAGE_ser2net is not set
 # CONFIG_PACKAGE_simple-adblock is not set
-CONFIG_PACKAGE_simple-obfs-client=y
+# CONFIG_PACKAGE_simple-obfs-client is not set
 # CONFIG_PACKAGE_simple-obfs-server is not set
 CONFIG_PACKAGE_smartdns=y
 # CONFIG_PACKAGE_smbinfo is not set
@@ -6465,7 +6450,8 @@ CONFIG_V2RAY_PLUGIN_COMPRESS_UPX=y
 CONFIG_PACKAGE_vlmcsd=y
 # CONFIG_PACKAGE_vncrepeater is not set
 # CONFIG_PACKAGE_vnstat is not set
-# CONFIG_PACKAGE_vnstat2 is not set
+CONFIG_PACKAGE_vnstat2=y
+CONFIG_PACKAGE_vnstati2=y
 # CONFIG_PACKAGE_vpn-policy-routing is not set
 # CONFIG_PACKAGE_vpnbypass is not set
 # CONFIG_PACKAGE_vti is not set
