@@ -12,6 +12,7 @@ sudo apt install -y ack antlr3 asciidoc autoconf automake autopoint binutils bis
 
 ```bash
 https://github.com/immortalwrt/immortalwrt/tree/openwrt-21.02
+https://github.com/immortalwrt/luci-app-unblockneteasemusic
 ```
 `git clone -b openwrt-21.02 --single-branch https://github.com/immortalwrt/immortalwrt`
 
