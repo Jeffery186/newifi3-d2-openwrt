@@ -3,12 +3,22 @@
 > 适用于新三路由器的openwrt固件
 
  - coolsnowwolf分支源码：https://github.com/coolsnowwolf/lede
- - 2021.07.20最新编译
+ - 2021.10.xx最新编译
  - Screenshot文件夹为最新编译的预览截图
 
 ## master分支：
 
 master分支为默认分支，常规使用下载该分支编译的固件即可
+
+## immortalwrt
+
+### 源码
+
+via：`https://github.com/immortalwrt/immortalwrt`
+
+默认管理地址为`192.168.10.1`，密码`password`；
+
+到`Actions`构建页面下载，刷入时使用含有`immortalwrt`字段的bin固件。
 
 ## Dev分支：
 
