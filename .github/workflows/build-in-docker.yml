@@ -1,0 +1,30 @@
+name: Build-OpenWrt-ImmortalWrt-b2
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: '0 15 * * 1,2,4,5,6'
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+
+      - name: rm -rf
+        run: |
+          docker rmi $(docker images -q)
+          sudo apt-get -qq remove --purge azure-cli ghc zulu* hhvm llvm* firefox google* dotnet* powershell mysql* php* mssql-tools msodbcsql17 android*
+          sudo apt-get -qq autoremove --purge
+          sudo apt-get -qq clean
+          sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /usr/local/lib/android
+      runs:
+        using: 'docker'
+        image: 'ghcr.io/ibook86/docker-openwrt-build:main'
+        entrypoint: 'build-in-docker.sh'
+#        pre-entrypoint: 'build-in-docker.sh'
+#        post-entrypoint: 'cleanup.sh'
