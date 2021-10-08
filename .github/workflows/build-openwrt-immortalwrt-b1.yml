@@ -13,6 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Maximize build space
+        uses: easimon/maximize-build-space@master
+        with:
+          root-reserve-mb: 512
+          swap-size-mb: 1024
+          remove-dotnet: 'true'
+
       - name: Clone Repository
         uses: actions/checkout@v2
 
@@ -33,6 +40,8 @@ jobs:
 
       - name: Build
         run: |
+          echo "Free space:"
+          df -h
           cp .config_immortalwrt ./immortalwrt/.config && cp before_build.sh ./immortalwrt/before_build.sh
           cd immortalwrt
           chmod +x before_build.sh && ./before_build.sh
