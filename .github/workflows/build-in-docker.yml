@@ -3,7 +3,7 @@ name: Build-OpenWrt-ImmortalWrt-b2
 on:
   push:
     branches:
-      - b2
+      - master
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -22,9 +22,6 @@ jobs:
           sudo apt-get -qq autoremove --purge
           sudo apt-get -qq clean
           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /usr/local/lib/android
-      runs:
-        using: 'docker'
-        image: 'ghcr.io/ibook86/docker-openwrt-build:main'
-        entrypoint: 'build-in-docker.sh'
-#        pre-entrypoint: 'build-in-docker.sh'
-#        post-entrypoint: 'cleanup.sh'
+      - name: run docker container
+        run: |
+          docker pull ghcr.io/ibook86/docker-openwrt-build:main
