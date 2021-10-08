@@ -10,7 +10,7 @@ on:
     - cron: '0 3 * * 0,2,3,5,6'
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
 
     steps:
       #      - name: Maximize build space
