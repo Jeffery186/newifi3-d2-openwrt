@@ -11,6 +11,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-18.04
+    env:
+      WORK_PATH: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt
 
     steps:
       - name: Clone Repository
@@ -40,8 +42,9 @@ jobs:
         run: |
           echo "Free space:"
           df -h
-          cp .config_immortalwrt ./immortalwrt/.config && cp before_build.sh ./immortalwrt/before_build.sh
-          cd immortalwrt
+          cp ${{ env.WORK_PATH }}/.config_immortalwrt ${{ env.WORK_PATH }}/immortalwrt/.config
+          cp ${{ env.WORK_PATH }}/before_build.sh ${{ env.WORK_PATH }}/immortalwrt/before_build.sh
+          cd ${{ env.WORK_PATH }}/immortalwrt
           chmod +x before_build.sh && ./before_build.sh
           ./scripts/feeds update -a && ./scripts/feeds install -a
           make defconfig
