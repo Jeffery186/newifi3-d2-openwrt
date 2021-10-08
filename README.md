@@ -18,7 +18,7 @@ via：`https://github.com/immortalwrt/immortalwrt`
 
 默认管理地址为`192.168.10.1`，密码`password`；
 
-到`Actions`构建页面下载，刷入时使用含有`immortalwrt`字段的bin固件。
+到`Actions`构建页面`https://github.com/ibook86/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml`下载，刷入时使用含有`immortalwrt`字段的bin固件。
 
 ## Dev分支：
 
