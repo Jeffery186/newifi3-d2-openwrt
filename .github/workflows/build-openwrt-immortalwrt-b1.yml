@@ -59,10 +59,10 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Packages-$(date +%Y%m%d%H%M)
-          path: ./bin/packages/
+          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/packages/
 
       - name: Upload Firmwares
         uses: actions/upload-artifact@v2
         with:
           name: ImmortalWrt-Newifi3-d2-$(date +%Y%m%d%H%M)
-          path: ./bin/targets/
+          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/
