@@ -51,20 +51,22 @@ jobs:
           make -j8 download
           make -j$(($(nproc) + 1)) V=s
 
+          echo "FILE_DATE=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+
       - name: Upload Packages
         uses: actions/upload-artifact@v2
         with:
-          name: ImmortalWrt-Newifi3-d2-Packages
+          name: Newifi3-d2-Packages-${{ env.FILE_DATE }}
           path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/packages/
 
       - name: Upload Firmwares
         uses: actions/upload-artifact@v2
         with:
-          name: ImmortalWrt-Newifi3-d2-Firmwares
+          name: Newifi3-d2-Firmwares-${{ env.FILE_DATE }}
           path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/
 
       - name: Upload bin
         uses: actions/upload-artifact@v2
         with:
-          name: immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+          name: immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin-${{ env.FILE_DATE }}
           path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/ramips/mt7621/immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
