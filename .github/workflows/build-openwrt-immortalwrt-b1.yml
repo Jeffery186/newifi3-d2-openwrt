@@ -34,24 +34,11 @@ jobs:
           sudo apt-get -qq clean
           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /usr/local/lib/android
 
-      - name: Clone
-        run: |
-          chmod +x clone_source.sh && ./clone_source.sh
-
-      - name: Build
+      - name: Build Immortalwrt
         run: |
           echo "Free space:"
           df -h
-          cp ${{ env.WORK_PATH }}/.config_immortalwrt ${{ env.WORK_PATH }}/immortalwrt/.config
-          cp ${{ env.WORK_PATH }}/before_build.sh ${{ env.WORK_PATH }}/immortalwrt/before_build.sh
-          cd ${{ env.WORK_PATH }}/immortalwrt
-          chmod +x before_build.sh && ./before_build.sh
-          ./scripts/feeds update -a && ./scripts/feeds install -a
-          make defconfig
-          make -j8 download
-          make -j$(($(nproc) + 1)) V=s
-
-          echo "FILE_DATE=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
+          chmod +x build.sh && ./build.sh
 
       - name: Upload Packages
         uses: actions/upload-artifact@v2
