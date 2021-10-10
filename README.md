@@ -20,6 +20,8 @@ via：`https://github.com/immortalwrt/immortalwrt`
 
 到`Actions`构建页面`https://github.com/ibook86/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml`下载，刷入时使用含有`immortalwrt`字段的bin固件。
 
+**该固件每天凌晨三点自动开始编译，推荐下载使用**
+
 ## Dev分支：
 
 Dev分支的固件为校园网专用版本，只保留**核心功能**，体积更小，可以安装Python环境无限制使用校园网；
