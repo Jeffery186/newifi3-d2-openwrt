@@ -1,4 +1,4 @@
-name: Build-OpenWrt-ImmortalWrt-Release
+name: ImmortalWrt-Release
 env:
   TZ: Asia/Shanghai
 
