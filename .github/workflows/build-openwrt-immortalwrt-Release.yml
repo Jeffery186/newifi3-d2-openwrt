@@ -1,0 +1,53 @@
+name: Build-OpenWrt-ImmortalWrt-Release
+env:
+  TZ: Asia/Shanghai
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: '0 2 * * 0,2,3,5,6'
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    env:
+      BIN_PATH: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin
+
+    steps:
+      - name: Clone Repository
+        uses: actions/checkout@v2
+
+      - name: Build Environment Initialization
+        run: |
+          sudo apt-get -qq remove --purge mysql* php* google* firefox ghc azure-cli \
+          dotnet* powershell ruby-full zulu* hhvm llvm*
+
+          sudo rm -rf /usr/local/lib/android
+          sudo rm -rf /var/lib/docker
+          sudo rm -rf /usr/share/dotnet
+          sudo rm -rf /opt/hostedtoolcache/go /opt/hostedtoolcache/Ruby /opt/hostedtoolcache/node
+
+          sudo apt-get install -qq -y build-essential asciidoc binutils bzip2 gawk gettext \
+          git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 \
+          libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full \
+          msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf \
+          automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
+
+          sudo apt-get -qq autoremove --purge
+          sudo apt-get -qq clean
+
+      - name: Build Immortalwrt
+        run: |
+          chmod +x build.sh && ./build.sh
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: v${{ env.FILE_DATE }}
+          files: |
+            ${{ env.BIN_PATH }}/targets/ramips/mt7621/immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+            ${{ env.BIN_PATH }}/targets/ramips/mt7621/immortalwrt-ramips-mt7621-d-team_newifi-d2.manifest
