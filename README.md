@@ -94,6 +94,22 @@ https://github.com/coolsnowwolf/lede
 
 https://github.com/immortalwrt/immortalwrt
 
+## 克隆本项目
+
+由于历史原因，克隆时请加上 `--depth=1` 参数
+
+如：
+
+```shell
+git clone --depth=1 https://github.com/ibook86/newifi3-d2-openwrt.git
+```
+
+or:
+
+```shell
+git clone --depth=1 git@github.com:ibook86/newifi3-d2-openwrt.git
+```
+
 ## 更新日志：
 
 #### 2021.10.19
