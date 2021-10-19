@@ -2,9 +2,12 @@
 
 > 适用于新三路由器的openwrt固件
 
- - coolsnowwolf分支源码：https://github.com/coolsnowwolf/lede
+ - Release和Actions现在都默认使用immortalwrt分支源码：https://github.com/immortalwrt/immortalwrt
+ - openwrt版本：21.02
  - 2021.10.xx最新编译
  - Screenshot文件夹为最新编译的预览截图
+ - 内核：5.4.x
+ - 默认管理地址为`192.168.10.1`，密码`password`；
 
 ## master分支：
 
@@ -18,9 +21,23 @@ via：`https://github.com/immortalwrt/immortalwrt`
 
 默认管理地址为`192.168.10.1`，密码`password`；
 
-到`Actions`构建页面`https://github.com/ibook86/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml`下载，刷入时使用含有`immortalwrt`字段的bin固件。
+### 下载
 
-**该固件每天凌晨三点自动开始编译，推荐下载使用**
+下载Release版或Actions都可以
+
+#### Release
+
+`https://github.com/ibook86/newifi3-d2-openwrt/releases`
+
+#### Actions
+
+到`Actions`构建页面 `https://github.com/ibook86/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml` 下载，刷入时使用含有`immortalwrt`字段的bin固件；
+
+Actions下载页面附带有一同编译的软件包
+
+**Actions编译的固件周一、三、五、六、日的凌晨2点自动开始编译，推荐下载使用**
+
+下载 `immortalwrt-ramips-mt7621-d-team_newifi-d2.manifest` 文件可查看固件内核版本和固件所包含的软件包信息，使用文本编辑器如 `Sublime Text` 等都可以打开查看
 
 ## Dev分支：
 
@@ -28,7 +45,7 @@ Dev分支的固件为校园网专用版本，只保留**核心功能**，体积�
 
 Dev分支的固件默认管理地址为`192.168.3.1`，密码`password`；
 
-且openwrt软件源已默认配置为腾讯云源(`https://mirrors.cloud.tencent.com/`)：
+且openwrt软件源已默认配置为腾讯云源( `https://mirrors.cloud.tencent.com/` )：
 
 ```bash
 opkg update
@@ -46,21 +63,21 @@ pip install pip -U
 pip config set global.index-url https://mirrors.cloud.tencent.com/pypi/simple
 ```
 
-您也可以临时使用本镜像来升级 pip：
+您也可以临时使用腾讯云源镜像来升级 pip：
 
 ```
 pip install -i https://mirrors.cloud.tencent.com/pypi/simple --upgrade pip
 ```
 
-## 使用方法：
+## ~~使用方法：~~
 
- - 下载名字为`openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`这样的固件，下载地址：https://github.com/ibook86/newifi3-d2-openwrt/releases，然后在Breed下刷入，譬如https://github.com/ibook86/newifi3-d2-openwrt/releases/download/2021.07.20-1005/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+ - ~~下载名字为 `openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin` 这样的固件，下载地址： `https://github.com/ibook86/newifi3-d2-openwrt/releases` ，然后在Breed下刷入，譬如 `https://github.com/ibook86/newifi3-d2-openwrt/releases/download/2021.07.20-1005/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`~~
 
- - 默认后台管理地址：192.168.1.1；密码：password
+ - ~~默认后台管理地址：192.168.1.1；密码：password~~
 
 ## 说明：
 
-coolsnowwolf分支的固件默认用的是SSR PLUS
+immortalwrt分支源码编译的固件默认用的是SSR PLUS
 
 ## 功能截图预览：
 
@@ -75,15 +92,14 @@ coolsnowwolf分支的固件默认用的是SSR PLUS
 
 https://github.com/coolsnowwolf/lede
 
+https://github.com/immortalwrt/immortalwrt
+
 ## 更新日志：
+
+#### 2021.10.19
+
+- openwrt源码改用immortalwrt
 
 #### 2021年7月17日
 
 - 添加nfs内核
-
-## 注意：
-
-- Actions编译的固件可以自行到Actions页面的Artifacts处下载，Actions编译的为Beta版，并不能保证其稳定性(追新折腾党请无视此条，也可以Fork后自行编译)
-
-
-- 追求稳定的请到Releases处下载(本人日用的就是最新的Releases版)
