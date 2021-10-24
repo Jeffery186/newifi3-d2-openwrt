@@ -24,6 +24,7 @@ jobs:
 
       - name: Build Environment Initialization
         run: |
+          sudo apt-get update
           sudo apt-get -qq remove --purge mysql* php* google* firefox ghc azure-cli \
           dotnet* powershell ruby-full zulu* hhvm llvm*
 
