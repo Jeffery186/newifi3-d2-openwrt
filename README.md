@@ -4,7 +4,7 @@
 
  - Release和Actions现在都默认使用immortalwrt分支源码：https://github.com/immortalwrt/immortalwrt
  - openwrt版本：21.02
- - 2021.10.xx最新编译
+ - 2022.1.1最新编译
  - Screenshot文件夹为最新编译的预览截图
  - 内核：5.4.x
  - 默认管理地址为`192.168.10.1`，密码`password`；
@@ -111,6 +111,11 @@ git clone --depth=1 git@github.com:ibook86/newifi3-d2-openwrt.git
 ```
 
 ## 更新日志：
+
+#### 2022.1.1
+
+- 增加U盘自动挂载支持
+- 增加kmod-tun内核模块
 
 #### 2021.10.19
 
