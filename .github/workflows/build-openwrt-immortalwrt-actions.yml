@@ -21,7 +21,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Init Compilation Dependencies
         env:
           DEBIAN_FRONTEND: noninteractive
@@ -57,12 +57,12 @@ jobs:
         run: |
           /bin/bash /home/runner/immortalwrt/after_build.sh
       - name: Upload Packages
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Packages
           path: /home/runner/immortalwrt/bin/packages/
       - name: Upload Firmwares
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: Firmwares
           path: /home/runner/immortalwrt/bin/targets/
