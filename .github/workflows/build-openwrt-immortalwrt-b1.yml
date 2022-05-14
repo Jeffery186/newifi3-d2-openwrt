@@ -6,7 +6,7 @@ env:
 on:
   push:
     branches:
-      - master
+      - dev2022
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -64,10 +64,10 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin-${{ env.FILE_DATE }}
-          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/ramips/mt7621/immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/ramips/mt7621
 
-      - name: Upload manifest
-        uses: actions/upload-artifact@v3
-        with:
-          name: manifest-${{ env.FILE_DATE }}
-          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/ramips/mt7621/immortalwrt-ramips-mt7621-d-team_newifi-d2.manifest
+#      - name: Upload manifest
+#        uses: actions/upload-artifact@v3
+#        with:
+#          name: manifest-${{ env.FILE_DATE }}
+#          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/ramips/mt7621
