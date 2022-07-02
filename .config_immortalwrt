@@ -6035,6 +6035,8 @@ CONFIG_PACKAGE_tc-tiny=y
 # CONFIG_PACKAGE_strongswan is not set
 # CONFIG_PACKAGE_tailscale is not set
 # CONFIG_PACKAGE_tailscaled is not set
+CONFIG_PACKAGE_tailscale=y
+CONFIG_PACKAGE_tailscaled=y
 # CONFIG_PACKAGE_tinc is not set
 # CONFIG_PACKAGE_tinyfecvpn is not set
 # CONFIG_PACKAGE_uanytun is not set
