@@ -26,7 +26,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get -qq remove --purge mysql* php* google* firefox ghc azure-cli \
-          dotnet* powershell ruby-full zulu* hhvm llvm*
+          dotnet* powershell ruby-full zulu* llvm*
 
           sudo rm -rf /usr/local/lib/android
           sudo rm -rf /var/lib/docker
