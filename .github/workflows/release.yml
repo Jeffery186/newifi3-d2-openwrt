@@ -1,4 +1,4 @@
-name: ImmortalWrt-Release
+name: Release
 
 env:
   TZ: Asia/Shanghai
