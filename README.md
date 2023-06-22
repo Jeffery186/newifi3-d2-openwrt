@@ -2,9 +2,9 @@
 
 > 适用于新三路由器的openwrt固件
 
- - Release和Actions现在都默认使用immortalwrt分支源码：https://github.com/immortalwrt/immortalwrt
+ - Release和Actions现在都默认使用coolsnowwolf分支源码：https://github.com/coolsnowwolf/lede
  - openwrt版本：21.02
- - 2022.1.1最新编译
+ - 2023.06.22最新编译
  - Screenshot文件夹为最新编译的预览截图
  - 内核：5.4.x
  - 默认管理地址为`192.168.10.1`，密码`password`；
@@ -13,11 +13,11 @@
 
 master分支为默认分支，常规使用下载该分支编译的固件即可
 
-## immortalwrt
+## coolsnowwolf
 
 ### 源码
 
-via：`https://github.com/immortalwrt/immortalwrt`
+via：`https://github.com/coolsnowwolf/lede`
 
 默认管理地址为`192.168.10.1`，密码`password`；
 
