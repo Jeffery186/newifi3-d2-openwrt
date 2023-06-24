@@ -27,11 +27,11 @@ via：`https://github.com/coolsnowwolf/lede`
 
 #### Release
 
-`https://github.com/ibook86/newifi3-d2-openwrt/releases`
+`https://github.com/Jeffery186/newifi3-d2-openwrt/releases`
 
 #### Actions
 
-到`Actions`构建页面 `https://github.com/ibook86/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml` 下载，刷入时使用含有`openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`类似名字的bin固件；
+到`Actions`构建页面 `https://github.com/Jeffery186/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml` 下载，刷入时使用含有`openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`类似名字的bin固件；
 
 Actions下载页面附带有一同编译的软件包
 
@@ -71,7 +71,7 @@ pip install -i https://mirrors.cloud.tencent.com/pypi/simple --upgrade pip
 
 ## ~~使用方法：~~
 
- - ~~下载名字为 `openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin` 这样的固件，下载地址： `https://github.com/ibook86/newifi3-d2-openwrt/releases` ，然后在Breed下刷入，譬如 `https://github.com/ibook86/newifi3-d2-openwrt/releases/download/2021.07.20-1005/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`~~
+ - ~~下载名字为 `openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin` 这样的固件，下载地址： `https://github.com/Jeffery186/newifi3-d2-openwrt/releases` ，然后在Breed下刷入，譬如 `https://github.com/Jeffery186/newifi3-d2-openwrt/releases/download/2021.07.20-1005/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`~~
 
  - ~~默认后台管理地址：192.168.1.1；密码：password~~
 
@@ -99,13 +99,13 @@ https://github.com/coolsnowwolf/lede
 如：
 
 ```shell
-git clone --depth=1 https://github.com/ibook86/newifi3-d2-openwrt.git
+git clone --depth=1 https://github.com/Jeffery186/newifi3-d2-openwrt.git
 ```
 
 or:
 
 ```shell
-git clone --depth=1 git@github.com:ibook86/newifi3-d2-openwrt.git
+git clone --depth=1 git@github.com:Jeffery186/newifi3-d2-openwrt.git
 ```
 
 ## 更新日志：
