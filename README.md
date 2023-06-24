@@ -31,13 +31,13 @@ via：`https://github.com/coolsnowwolf/lede`
 
 #### Actions
 
-到`Actions`构建页面 `https://github.com/ibook86/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml` 下载，刷入时使用含有`immortalwrt`字段的bin固件；
+到`Actions`构建页面 `https://github.com/ibook86/newifi3-d2-openwrt/actions/workflows/build-openwrt-immortalwrt-b1.yml` 下载，刷入时使用含有`openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin`类似名字的bin固件；
 
 Actions下载页面附带有一同编译的软件包
 
 **Actions编译的固件周一、三、五、六、日的凌晨2点自动开始编译，推荐下载使用**
 
-下载 `immortalwrt-ramips-mt7621-d-team_newifi-d2.manifest` 文件可查看固件内核版本和固件所包含的软件包信息，使用文本编辑器如 `Sublime Text` 等都可以打开查看
+下载 `openwrt-ramips-mt7621-d-team_newifi-d2.manifest` 文件可查看固件内核版本和固件所包含的软件包信息，使用文本编辑器如 `Sublime Text` 等都可以打开查看
 
 ## Dev分支：
 
@@ -77,7 +77,7 @@ pip install -i https://mirrors.cloud.tencent.com/pypi/simple --upgrade pip
 
 ## 说明：
 
-immortalwrt分支源码编译的固件默认用的是SSR PLUS
+coolsnowwolf分支源码编译的固件默认用的是SSR PLUS
 
 ## 功能截图预览：
 
@@ -91,8 +91,6 @@ immortalwrt分支源码编译的固件默认用的是SSR PLUS
  **致谢：**
 
 https://github.com/coolsnowwolf/lede
-
-https://github.com/immortalwrt/immortalwrt
 
 ## 克隆本项目
 
