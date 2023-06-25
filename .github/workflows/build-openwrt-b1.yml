@@ -1,4 +1,4 @@
-name: Build-OpenWrt-ImmortalWrt-b1
+name: Build-OpenWrt-b1
 
 env:
   TZ: Asia/Shanghai
@@ -14,9 +14,9 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     env:
-      WORK_PATH: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt
+      BIN_PATH: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/lede/bin
 
     steps:
       - name: Clone Repository
@@ -26,19 +26,17 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get -qq remove --purge mysql* php* google* firefox ghc azure-cli \
-          dotnet* powershell ruby-full zulu* hhvm llvm*
+          dotnet* powershell ruby-full zulu* llvm*
 
           sudo rm -rf /usr/local/lib/android
           sudo rm -rf /var/lib/docker
           sudo rm -rf /usr/share/dotnet
           sudo rm -rf /opt/hostedtoolcache/go /opt/hostedtoolcache/Ruby /opt/hostedtoolcache/node
 
-          sudo curl -s https://build-scripts.immortalwrt.eu.org/init_build_environment.sh | sudo bash
-
           sudo apt-get -qq autoremove --purge
           sudo apt-get -qq clean
 
-      - name: Build Immortalwrt
+      - name: Build lede
         run: |
           chmod +x build.sh && ./build.sh
 
@@ -46,22 +44,22 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Newifi3-d2-Packages-${{ env.FILE_DATE }}
-          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/packages/
+          path: ${{ env.BIN_PATH }}/packages/
 
       - name: Upload Firmwares
         uses: actions/upload-artifact@v3
         with:
           name: Newifi3-d2-Firmwares-${{ env.FILE_DATE }}
-          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/
+          path: ${{ env.BIN_PATH }}/targets/
 
       - name: Upload bin
         uses: actions/upload-artifact@v3
         with:
           name: immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin-${{ env.FILE_DATE }}
-          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/ramips/mt7621/immortalwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+          path: ${{ env.BIN_PATH }}/targets/ramips/mt7621/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
 
       - name: Upload manifest
         uses: actions/upload-artifact@v3
         with:
           name: manifest-${{ env.FILE_DATE }}
-          path: /home/runner/work/newifi3-d2-openwrt/newifi3-d2-openwrt/immortalwrt/bin/targets/ramips/mt7621/immortalwrt-ramips-mt7621-d-team_newifi-d2.manifest
+          path: ${{ env.BIN_PATH }}/targets/ramips/mt7621/openwrt-ramips-mt7621-d-team_newifi-d2.manifest

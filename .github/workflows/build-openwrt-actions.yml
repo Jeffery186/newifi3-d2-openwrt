@@ -1,4 +1,4 @@
-name: Build-OpenWrt-ImmortalWrt
+name: Build-OpenWrt
 
 on:
   workflow_dispatch:
