@@ -1,4 +1,4 @@
-name: Build-OpenWrt-b1
+name: Build-OpenWrt-lede-b1
 
 env:
   TZ: Asia/Shanghai
