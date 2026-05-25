@@ -1,0 +1,34 @@
+#!/bin/sh
+#
+# Hotspot Landing Page — First Boot Setup
+# Runs once after firmware flash
+# Location: /etc/uci-defaults/99-hotspot-landing
+#
+
+# ── Enable CGI in uhttpd ──
+# uhttpd is the default OpenWRT web server that serves LuCI
+uci -q batch <<UCI
+  # Enable CGI prefix for splash page
+  add_list uhttpd.main.interpreter='.cgi=/bin/sh'
+  set uhttpd.main.cgi_prefix='/cgi-bin'
+  commit uhttpd
+UCI
+
+# ── Set hotspot-landing as default UCI config ──
+# UCI config already in place from files overlay; ensure it's committed
+uci commit hotspot-landing 2>/dev/null
+
+# ── Ensure nodogsplash uses our config ──
+uci commit nodogsplash 2>/dev/null
+
+# ── Restart uhttpd to pick up CGI changes ──
+/etc/init.d/uhttpd restart 2>/dev/null
+
+# ── Enable and start nodogsplash ──
+/etc/init.d/nodogsplash enable
+/etc/init.d/nodogsplash start
+
+# ── Restart dnsmasq to ensure DNS works ──
+/etc/init.d/dnsmasq restart 2>/dev/null
+
+exit 0

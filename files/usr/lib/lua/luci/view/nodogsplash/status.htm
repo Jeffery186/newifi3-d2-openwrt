@@ -1,0 +1,55 @@
+<%#
+NoDogSplash status page
+Accessible at: /cgi-bin/luci/admin/services/nodogsplash/status
+%>
+
+<%+header%>
+
+<div class="cbi-map">
+	<h2><%:NoDogSplash Client Status%></h2>
+
+	<div class="cbi-section">
+		<p style="margin-bottom:16px;">
+			<a href="<%=luci.dispatcher.build_url("admin/services/nodogsplash/general")%>" class="btn">
+				&larr; Back to Settings
+			</a>
+		</p>
+
+		<%if clients and #clients > 0 then%>
+			<table class="table">
+				<tr>
+					<th>IP Address</th>
+					<th>MAC Address</th>
+					<th>First Seen</th>
+					<th>Session Start</th>
+					<th>Duration</th>
+					<th>Token</th>
+					<th>Actions</th>
+				</tr>
+				<%for i, c in ipairs(clients) do%>
+					<tr>
+						<td><%=c.ip%></td>
+						<td><code><%=c.mac%></code></td>
+						<td><%=c.first_seen%></td>
+						<td><%=c.session_start%></td>
+						<td><%=c.duration%></td>
+						<td><code><%=c.token%></code></td>
+						<td>
+							<form method="post" action="<%=luci.dispatcher.build_url("admin/services/nodogsplash/kick")%>">
+								<input type="hidden" name="mac" value="<%=c.mac%>"/>
+								<input type="submit" class="btn btn-danger" value="Disconnect"/>
+							</form>
+						</td>
+					</tr>
+				<%end%>
+			</table>
+		<%else%>
+			<div class="alert-message info">
+				<p>No active clients connected to the captive portal.</p>
+				<p>Connect a device to the guest WiFi SSID to see it here.</p>
+			</div>
+		<%end%>
+	</div>
+</div>
+
+<%+footer%>

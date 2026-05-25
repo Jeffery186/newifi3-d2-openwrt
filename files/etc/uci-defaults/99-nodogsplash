@@ -1,0 +1,67 @@
+#!/bin/sh
+# UCI defaults for NoDogSplash — applied on first boot
+# /etc/uci-defaults/99-nodogsplash
+
+# Only run once (check if already configured)
+[ "$(uci get nodogsplash.settings.ad_headline 2>/dev/null)" != "" ] && exit 0
+
+echo "[uci-defaults] Setting up NoDogSplash defaults..."
+
+# Set default values via UCI
+uci set nodogsplash.general='nodogsplash'
+uci set nodogsplash.general.enabled='1'
+uci set nodogsplash.general.gatewayinterface='wlan1'
+uci set nodogsplash.general.gatewayname='RateONE_Guest'
+uci set nodogsplash.general.uamport='2050'
+uci set nodogsplash.general.uamlisten='192.168.10.1'
+uci set nodogsplash.general.sessiontimeout='3600'
+uci set nodogsplash.general.idletimeout='1800'
+uci set nodogsplash.general.maxclients='50'
+
+uci set nodogsplash.settings='settings'
+uci set nodogsplash.settings.ad_headline='Welcome to RateONE Guest WiFi'
+uci set nodogsplash.settings.ad_subtext='Enjoy 1 hour free WiFi'
+uci set nodogsplash.settings.ad_image_url=''
+uci set nodogsplash.settings.ad_by='RateONE'
+uci set nodogsplash.settings.whatsapp_number='60123456789'
+uci set nodogsplash.settings.whatsapp_label='Chat with Us on WhatsApp'
+uci set nodogsplash.settings.countdown_secs='10'
+uci set nodogsplash.settings.session_dur='60'
+
+# Enable and start service
+uci set nodogsplash.general.enabled='1'
+uci commit nodogsplash
+
+# Enable WiFi guest interface at boot
+uci set wireless.guest_dev='wifi-iface'
+uci set wireless.guest_dev.device='radio0'
+uci set wireless.guest_dev.network='guest'
+uci set wireless.guest_dev.mode='ap'
+uci set wireless.guest_dev.ssid='RateONE-Guest'
+uci set wireless.guest_dev.encryption='none'
+uci commit wireless
+
+# Add guest interface to network
+uci set network.guest='interface'
+uci set network.guest.proto='static'
+uci set network.guest.ipaddr='192.168.10.1'
+uci set network.guest.netmask='255.255.255.0'
+uci set network.guest.device='wlan1'
+uci commit network
+
+# Firewall zone for guest
+uci set firewall.guest_zone='zone'
+uci set firewall.guest_zone.name='guest'
+uci set firewall.guest_zone.network='guest'
+uci set firewall.guest_zone.input='REJECT'
+uci set firewall.guest_zone.output='ACCEPT'
+uci set firewall.guest_zone.forward='REJECT'
+uci commit firewall
+
+# Enable the init script
+chmod +x /etc/init.d/nodog-enable
+/etc/init.d/nodog-enable enable
+
+echo "[uci-defaults] NoDogSplash defaults applied."
+
+exit 0

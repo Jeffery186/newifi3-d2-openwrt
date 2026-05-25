@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Guest WiFi - Welcome</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    color: #fff;
+  }
+
+  .container {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 24px;
+    padding: 36px 28px;
+    max-width: 440px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5), 0 0 80px rgba(99,102,241,0.12);
+  }
+
+  /* Header */
+  .brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .wifi-icon svg { width: 28px; height: 28px; }
+
+  .brand {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #818cf8;
+  }
+
+  .welcome-title {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    background: linear-gradient(90deg, #e0e7ff, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .welcome-sub {
+    font-size: 13px;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 24px;
+  }
+
+  /* Advertisement Banner */
+  .ad-banner {
+    width: 100%;
+    height: 140px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 8px 32px rgba(102,126,234,0.25);
+  }
+
+  .ad-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+  }
+
+  .ad-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 12px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    text-align: left;
+    z-index: 2;
+  }
+
+  .ad-overlay .ad-headline {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .ad-overlay .ad-sub {
+    font-size: 11px;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .ad-placeholder {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .ad-placeholder .ad-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 6px;
+  }
+
+  .ad-placeholder .ad-big-text {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+  }
+
+  .ad-placeholder .ad-small-text {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+  }
+
+  /* Countdown */
+  .countdown-section {
+    margin: 20px 0 16px;
+  }
+
+  .countdown-label {
+    font-size: 12px;
+    color: rgba(255,255,255,0.4);
+    margin-bottom: 14px;
+  }
+
+  .countdown-ring {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 12px;
+    position: relative;
+  }
+
+  .countdown-ring svg {
+    transform: rotate(-90deg);
+    width: 80px;
+    height: 80px;
+  }
+
+  .countdown-ring circle {
+    fill: none;
+    stroke-width: 5;
+  }
+
+  .countdown-ring .bg   { stroke: rgba(255,255,255,0.1); }
+  .countdown-ring .prog {
+    stroke: #818cf8;
+    stroke-linecap: round;
+    stroke-dasharray: 226;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s linear;
+    filter: drop-shadow(0 0 6px rgba(129,140,248,0.5));
+  }
+
+  .countdown-num {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+    font-weight: 800;
+    color: #e0e7ff;
+  }
+
+  .countdown-status {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .countdown-status.waiting { color: #fbbf24; }
+  .countdown-status.ready   { color: #34d399; }
+
+  /* Info Row */
+  .info-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .info-card {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+
+  .info-card .ic-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-bottom: 3px;
+  }
+
+  .info-card .ic-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #e0e7ff;
+  }
+
+  /* Buttons */
+  .btn-connect {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-connect:disabled {
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.22);
+    cursor: not-allowed;
+  }
+
+  .btn-connect:not(:disabled) {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    box-shadow: 0 8px 32px rgba(102,126,234,0.4);
+    cursor: pointer;
+  }
+
+  .btn-connect:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(102,126,234,0.5);
+  }
+
+  .btn-connect:not(:disabled):active { transform: translateY(0); }
+
+  .btn-progress-bar {
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 0 0 14px 14px;
+    transition: width 1s linear;
+  }
+
+  /* WhatsApp Button */
+  .btn-whatsapp {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid rgba(37,211,102,0.4);
+    border-radius: 14px;
+    background: rgba(37,211,102,0.08);
+    font-size: 14px;
+    font-weight: 600;
+    color: #25d366;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    text-decoration: none;
+  }
+
+  .btn-whatsapp:hover {
+    background: rgba(37,211,102,0.15);
+    border-color: #25d366;
+    transform: translateY(-1px);
+  }
+
+  .btn-whatsapp svg { width: 20px; height: 20px; }
+
+  /* Terms */
+  .terms {
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    margin-top: 18px;
+    line-height: 1.7;
+  }
+
+  .terms a { color: rgba(255,255,255,0.45); text-decoration: none; }
+
+  /* Powered by */
+  .powered-by {
+    font-size: 10px;
+    color: rgba(255,255,255,0.2);
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="brand-row">
+    <div class="wifi-icon">
+      <svg width="28" height="28" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="38" r="4" fill="#818cf8"/>
+        <path d="M12 28 Q24 18 36 28" stroke="#818cf8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.4"/>
+        <path d="M16 32 Q24 24 32 32" stroke="#818cf8" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6"/>
+        <path d="M20 36 Q24 30 28 36" stroke="#818cf8" stroke-width="3" stroke-linecap="round" fill="none"/>
+      </svg>
+    </div>
+    <span class="brand">RateONE Guest WiFi</span>
+  </div>
+
+  <h1 class="welcome-title">Welcome, Guest!</h1>
+  <p class="welcome-sub">Connect to complimentary WiFi — it's free!</p>
+
+  <!-- Ad Banner -->
+  <div class="ad-banner" id="adBanner">
+    <!-- If ad_image_url is set, img tag shows here; otherwise placeholder -->
+    <div class="ad-placeholder">
+      <span class="ad-label">Sponsored</span>
+      <span class="ad-big-text" id="adHeadline">Your Brand Here</span>
+      <span class="ad-small-text" id="adSubtext">Advertise with us</span>
+    </div>
+    <div class="ad-overlay">
+      <div class="ad-headline" id="adOverlayHeadline">Your Brand Here</div>
+      <div class="ad-sub" id="adOverlaySub">Tap to learn more</div>
+    </div>
+    <!-- Real image (uncomment when ad_image_url is set):
+    <img src="{{ad_image_url}}" alt="Advertisement" />
+    -->
+  </div>
+
+  <!-- Countdown -->
+  <div class="countdown-section">
+    <p class="countdown-label">Please wait before connecting</p>
+    <div class="countdown-ring">
+      <svg viewBox="0 0 80 80">
+        <circle class="bg"   cx="40" cy="40" r="36"/>
+        <circle class="prog" id="progressCircle" cx="40" cy="40" r="36"
+          stroke-dasharray="226" stroke-dashoffset="226"/>
+      </svg>
+      <span class="countdown-num" id="countdownNum">10</span>
+    </div>
+    <p class="countdown-status waiting" id="countdownStatus">Seconds remaining...</p>
+  </div>
+
+  <!-- Info Cards -->
+  <div class="info-row">
+    <div class="info-card">
+      <div class="ic-label">Session</div>
+      <div class="ic-value" id="sessionDur">60 min</div>
+    </div>
+    <div class="info-card">
+      <div class="ic-label">Speed</div>
+      <div class="ic-value">Unlimited</div>
+    </div>
+    <div class="info-card">
+      <div class="ic-label">Ad • By</div>
+      <div class="ic-value" id="adBy">RateONE</div>
+    </div>
+  </div>
+
+  <!-- Connect Button -->
+  <button class="btn-connect" id="btnConnect" disabled>
+    <span id="btnIcon">🔒</span>
+    <span id="btnLabel">Please wait... 10s</span>
+    <div class="btn-progress-bar" id="btnProgress"></div>
+  </button>
+
+  <!-- WhatsApp Button -->
+  <a class="btn-whatsapp" id="btnWhatsapp" href="#" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="#25d366">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span id="whatsappLabel">Chat with Us on WhatsApp</span>
+  </a>
+
+  <p class="terms">
+    By connecting you agree to our
+    <a href="#">Terms of Service</a> &
+    <a href="#">Privacy Policy</a>.<br>
+    This is a guest network. Need help?
+  </p>
+
+  <div class="powered-by">
+    🔒 Powered by <strong>RateONE</strong> Smart WiFi
+  </div>
+</div>
+
+<script>
+  /* ----------------------------------------------------------------
+   * NoDogSplash Template Variables (injected by nodogsplash):
+   *   {{token}}          — authentication token
+   *   {{redirect}}       — original URL client tried to access
+   *   {{ad_headline}}    — configured ad headline
+   *   {{ad_subtext}}     — configured ad subtext
+   *   {{ad_image_url}}   — configured ad image URL
+   *   {{ad_by}}          — "Advertised by XYZ"
+   *   {{whatsapp_number}}— e.g. 60123456789
+   *   {{whatsapp_label}} — button label
+   *   {{countdown_secs}} — seconds to wait (default 10)
+   *   {{session_dur}}    — session duration in minutes
+   *   {{landing_url}}    — this page URL for auth redirect
+   * ---------------------------------------------------------------- */
+
+  const TOTAL  = parseInt('{{countdown_secs}}' || '10', 10);
+  const CIRC   = 226; // 2 * PI * 36
+  let    sec   = TOTAL;
+
+  const btn       = document.getElementById('btnConnect');
+  const btnIcon   = document.getElementById('btnIcon');
+  const btnLabel  = document.getElementById('btnLabel');
+  const btnProg   = document.getElementById('btnProgress');
+  const numEl     = document.getElementById('countdownNum');
+  const statusEl  = document.getElementById('countdownStatus');
+  const circle    = document.getElementById('progressCircle');
+  const waBtn     = document.getElementById('btnWhatsapp');
+  const sessionEl = document.getElementById('sessionDur');
+
+  // WhatsApp
+  const waNum = '{{whatsapp_number}}' || '';
+  const waLbl = '{{whatsapp_label}}'  || 'Chat with Us on WhatsApp';
+  if (waNum) {
+    document.getElementById('whatsappLabel').textContent = waLbl;
+    // format: 60123456789 → https://wa.me/60123456789
+    waBtn.href = 'https://wa.me/' + waNum.replace(/\D/g, '');
+  } else {
+    waBtn.style.display = 'none';
+  }
+
+  // Ad dynamic text
+  const headline = '{{ad_headline}}';
+  const subtext  = '{{ad_subtext}}';
+  if (headline) {
+    document.getElementById('adHeadline').textContent         = headline;
+    document.getElementById('adOverlayHeadline').textContent  = headline;
+  }
+  if (subtext) {
+    document.getElementById('adSub').textContent              = subtext;
+    document.getElementById('adOverlaySub').textContent       = subtext;
+  }
+
+  // Ad by
+  const adBy = '{{ad_by}}';
+  if (adBy) document.getElementById('adBy').textContent = adBy;
+
+  // Ad image
+  const adImg = '{{ad_image_url}}';
+  if (adImg) {
+    const img = document.createElement('img');
+    img.src   = adImg;
+    img.alt   = 'Advertisement';
+    img.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0';
+    const banner = document.getElementById('adBanner');
+    banner.insertBefore(img, banner.firstChild);
+    // Hide placeholder text when real image loads
+    img.onload = () => {
+      const ph = banner.querySelector('.ad-placeholder');
+      if (ph) ph.style.display = 'none';
+    };
+  }
+
+  // Session display
+  const sess = parseInt('{{session_dur}}' || '60', 10);
+  sessionEl.textContent = sess + ' min';
+
+  // UI updater
+  function tick() {
+    const pct = (TOTAL - sec) / TOTAL;
+    circle.style.strokeDashoffset = CIRC * (1 - pct);
+    numEl.textContent = sec;
+
+    if (sec > 0) {
+      btn.disabled   = true;
+      btnIcon.textContent = '🔒';
+      btnLabel.textContent = 'Please wait... ' + sec + 's';
+      btnProg.style.width  = (pct * 100) + '%';
+      statusEl.textContent  = sec + ' second' + (sec !== 1 ? 's' : '') + ' remaining...';
+      statusEl.className   = 'countdown-status waiting';
+    } else {
+      circle.style.strokeDashoffset = 0;
+      btn.disabled   = false;
+      btnIcon.textContent = '🚀';
+      btnLabel.textContent = 'Go Online — Free Access!';
+      btnProg.style.width  = '100%';
+      statusEl.textContent  = '✅ Ready! Tap to connect';
+      statusEl.className   = 'countdown-status ready';
+
+      btn.addEventListener('click', function onConnect() {
+        btn.removeEventListener('click', onConnect);
+        btnLabel.textContent = '⏳ Redirecting...';
+        btn.style.opacity = '0.7';
+        // NoDogSplash auth
+        // window.location.href = '/nodogsplash_auth?tok={{token}}&redir={{redirect}}';
+        setTimeout(() => {
+          btnLabel.textContent = '🎉 You\'re online!';
+          btn.style.opacity = '1';
+        }, 1500);
+      });
+    }
+  }
+
+  tick();
+  const interval = setInterval(() => {
+    sec--;
+    tick();
+    if (sec <= 0) clearInterval(interval);
+  }, 1000);
+</script>
+</body>
+</html>

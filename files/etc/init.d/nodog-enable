@@ -1,0 +1,43 @@
+#!/bin/sh /etc/rc.common
+# NoDogSplash Guest WiFi Enabler
+# Creates Guest AP on wlan1 + starts NoDogSplash
+# Called at boot by /etc/rc.local
+
+START=95
+USE_PROCD=0
+
+setup_guest_wifi() {
+    local enabled=$(uci get nodogsplash.settings.enabled 2>/dev/null)
+    [ "$enabled" != "1" ] && {
+        echo "[nodog-enable] Captive portal disabled in config."
+        return 0
+    }
+
+    local guest_ssid=$(uci get nodogsplash.settings.guest_ssid 2>/dev/null)
+    local guest_iface=$(uci get nodogsplash.general.gatewayinterface 2>/dev/null)
+
+    guest_ssid="${guest_ssid:-RateONE-Guest}"
+    guest_iface="${guest_iface:-wlan1}"
+
+    echo "[nodog-enable] Configuring guest WiFi on $guest_iface..."
+
+    # Bring up guest interface if not already up
+    ip link set $guest_iface up 2>/dev/null
+    # Ensure it has an IP
+    ip addr add 192.168.10.1/24 dev $guest_iface 2>/dev/null
+
+    # Disable router advertisements (optional)
+    echo 0 > /proc/sys/net/ipv6/conf/$guest_iface/disable_ipv6
+
+    # Start NoDogSplash
+    /etc/init.d/nodogsplash enabled 2>/dev/null
+    /etc/init.d/nodogsplash start 2>/dev/null
+
+    echo "[nodog-enable] Guest WiFi captive portal started on $guest_iface"
+}
+
+boot() {
+    # Wait for WiFi to initialize
+    sleep 5
+    setup_guest_wifi
+}

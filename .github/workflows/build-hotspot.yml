@@ -1,0 +1,151 @@
+name: Build-Hotspot-Firmware
+
+'on':
+  workflow_dispatch:
+    inputs:
+      countdown_secs:
+        description: 'Countdown seconds'
+        required: false
+        default: '10'
+        type: string
+      session_dur:
+        description: 'Session duration (minutes)'
+        required: false
+        default: '60'
+        type: string
+  repository_dispatch:
+    types: [build-hotspot]
+
+env:
+  TZ: Asia/Shanghai
+  FIRMWARE_PREFIX: openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+
+    steps:
+      - name: Checkout hotspot branch
+        uses: actions/checkout@v4
+        with:
+          ref: hotspot
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get -qq remove --purge mysql* php* google* firefox ghc azure-cli dotnet* powershell ruby-full zulu* llvm* 2>/dev/null || true
+          sudo rm -rf /usr/local/lib/android /var/lib/docker /usr/share/dotnet /opt/hostedtoolcache/go /opt/hostedtoolcache/Ruby /opt/hostedtoolcache/node 2>/dev/null || true
+          sudo apt-get -qq autoremove --purge
+          sudo apt-get -qq clean
+          sudo apt-get install -y -qq \
+            ack antlr3 asciidoc autoconf automake autopoint binutils bison build-essential \
+            bzip2 ccache cmake cpio curl device-tree-compiler fastjar flex gawk gettext \
+            gcc-multilib g++-multilib git gperf haveged help2man intltool libc6-dev-i386 \
+            libelf-dev libglib2.0-dev libgmp3-dev libltdl-dev libmpc-dev libmpfr-dev \
+            libncurses5-dev libncursesw5-dev libreadline-dev libssl-dev libtool lrzsz \
+            mkisofs msmtp nano ninja-build p7zip p7zip-full patch pkgconf \
+            python3 python3-pyelftools libpython3-dev qemu-utils \
+            rsync scons squashfs-tools subversion swig texinfo uglifyjs \
+            upx-ucl unzip vim wget xmlto xxd zlib1g-dev libcppunit-dev libxml-parser-perl
+
+      - name: Clone coolsnowwolf/lede source
+        run: |
+          export OP_BUILD_PATH=$PWD
+          git clone --depth=1 https://github.com/coolsnowwolf/lede.git
+          cd lede
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+          rm -rf ./tmp .config
+          if [ -f "${OP_BUILD_PATH}/.config" ]; then
+            cp "${OP_BUILD_PATH}/.config" .config
+          fi
+          make defconfig
+
+      - name: Patch .config for NoDogSplash
+        run: |
+          cd lede
+          echo "CONFIG_DEFAULT_nodogsplash=y" >> .config
+          echo "CONFIG_PACKAGE_nodogsplash=y" >> .config
+          echo "CONFIG_PACKAGE_libjson-c=y"   >> .config
+          ./scripts/feeds install nodogsplash luci-app-nodogsplash 2>/dev/null || true
+          echo "CONFIG_PACKAGE_luci-app-nodogsplash=y" >> .config 2>/dev/null || true
+          echo "NoDogSplash added to .config."
+
+      - name: Copy hotspot files into lede source
+        run: |
+          set -e
+          cd lede
+          mkdir -p ./etc/nodogsplash ./etc/config ./etc/init.d \
+                   ./etc/uci-defaults \
+                   ./usr/lib/lua/luci/controller \
+                   ./usr/lib/lua/luci/model/cbi \
+                   ./usr/lib/lua/luci/view/nodogsplash
+          cp ../splash.html ./etc/nodogsplash/splash.html
+          cp ../files/etc/config/nodogsplash ./etc/config/nodogsplash
+          cp ../files/etc/init.d/nodog-enable ./etc/init.d/nodog-enable
+          chmod +x ./etc/init.d/nodog-enable
+          cp ../files/etc/uci-defaults/99-nodogsplash ./etc/uci-defaults/99-nodogsplash
+          cp ../files/usr/lib/lua/luci/controller/nodogsplash.lua ./usr/lib/lua/luci/controller/nodogsplash.lua 2>/dev/null || true
+          cp ../files/usr/lib/lua/luci/model/cbi/nodogsplash.lua ./usr/lib/lua/luci/model/cbi/nodogsplash.lua 2>/dev/null || true
+          cp ../files/usr/lib/lua/luci/view/nodogsplash/status.htm ./usr/lib/lua/luci/view/nodogsplash/status.htm 2>/dev/null || true
+          echo "Custom files copied."
+
+      - name: Download sources
+        run: |
+          cd lede
+          echo "Downloading all source packages..."
+          make download -j$(nproc)
+          echo "Download complete."
+
+      - name: Build firmware
+        env:
+          BUILD_LOG: ${{ github.workspace }}/build.log
+        run: |
+          cd lede
+          echo "Building firmware (2-4 hours)..."
+          date
+          make V=s -j$(nproc) 2>&1 | tee "${BUILD_LOG}"
+          date
+
+      - name: Locate firmware
+        env:
+          BUILD_LOG: ${{ github.workspace }}/build.log
+          OUTPUT_DIR: ${{ github.workspace }}/lede/bin/targets/ramips/mt7621
+        run: |
+          echo "=== Build log tail ==="
+          tail -30 "${BUILD_LOG}" 2>/dev/null || echo "No build log."
+          echo ""
+          echo "=== Looking for firmware ==="
+          ls -lh "${OUTPUT_DIR}"/${FIRMWARE_PREFIX} 2>/dev/null || {
+            echo "Sysupgrade not found — searching..."
+            find "${OUTPUT_DIR}" -name "*.bin" -maxdepth 1 -exec ls -lh {} \; 2>/dev/null || echo "No .bin found."
+          }
+          cp "${OUTPUT_DIR}"/${FIRMWARE_PREFIX} . 2>/dev/null || true
+          cp "${OUTPUT_DIR}"/openwrt-ramips-mt7621-d-team_newifi-d2.manifest . 2>/dev/null || true
+          cp "${BUILD_LOG}" . 2>/dev/null || true
+
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: newifi3-d2-hotspot-firmware
+          path: |
+            openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
+            openwrt-ramips-mt7621-d-team_newifi-d2.manifest
+            build.log
+          retention-days: 30
+
+      - name: Post-build info
+        if: success()
+        run: |
+          echo ""
+          echo "=========================================="
+          echo "  Build complete!"
+          echo "=========================================="
+          echo " Firmware: $PWD/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin"
+          echo " Size: $(du -h openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin 2>/dev/null | cut -f1)"
+          echo ""
+          echo " Download from: Actions → Artifacts"
+          echo " Flash via Breed: http://192.168.1.1"
+          echo " LuCI: http://192.168.10.1 (root/password)"
+          echo " Guest WiFi: RateONE-Guest"

@@ -1,0 +1,49 @@
+#
+# Hotspot Landing Page — UCI Configuration
+# Editable via LuCI admin panel at Services → Hotspot Landing
+#
+
+config landing 'main'
+  # ── Page Branding ──
+  option page_title         'Free WiFi Hotspot'
+  option page_subtitle      'Welcome! Please wait to continue...'
+  option logo_url           ''
+  option background_color   '#0f2027'
+
+  # ── Advertisement Section ──
+  option ad_enabled         '1'
+  option ad_title           'Internet Packages'
+  option ad_tagline         'High-speed fibre broadband for your home'
+
+  # ── Package 1 ──
+  option pkg1_enabled       '1'
+  option pkg1_speed         '30Mbps'
+  option pkg1_price         'RM 89/mo'
+  option pkg1_validity      'Unlimited'
+
+  # ── Package 2 ──
+  option pkg2_enabled       '1'
+  option pkg2_speed         '100Mbps'
+  option pkg2_price         'RM 129/mo'
+  option pkg2_validity      'Unlimited'
+
+  # ── Package 3 ──
+  option pkg3_enabled       '1'
+  option pkg3_speed         '500Mbps'
+  option pkg3_price         'RM 199/mo'
+  option pkg3_validity      'Unlimited'
+
+  # ── WhatsApp ──
+  option whatsapp_enabled   '1'
+  option whatsapp_number    '601161956105'
+  option whatsapp_message   'Hi, I am interested in your internet packages.'
+  option whatsapp_label     'Chat on WhatsApp'
+
+  # ── Timer ──
+  option countdown_seconds  '10'
+  option timer_label        'seconds until you can go online'
+  option timer_done_label   'You may now go online'
+
+  # ── Online Button ──
+  option button_label       '✅ Click to Online'
+  option footer_text        'Contact us for the best internet deals!'

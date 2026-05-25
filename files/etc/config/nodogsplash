@@ -1,0 +1,37 @@
+# NoDogSplash UCI Configuration
+# /etc/config/nodogsplash
+# Managed by LuCI — do not edit manually
+
+config nodogsplash 'general'
+	option enabled          '1'
+	option gatewayinterface 'wlan1'
+	option gatewayname      'RateONE_Guest'
+	option uamport          '2050'
+	option uamlisten        '192.168.10.1'
+	option uamurl           'http://192.168.10.1:2050/splash.html'
+	option sessiontimeout   '3600'
+	option idletimeout      '1800'
+	option maxclients       '50'
+	option uploadlimit      '0'
+	option downloadlimit    '0'
+	option trafficquota     '0'
+	option macmechanism     'ap_allow'
+	option authenticateImmediately '0'
+
+config authenticated
+	list allowed               '0.0.0.0/0'
+	list allowed               '::/0'
+
+config settings
+	# ----- Landing Page Customization -----
+	option ad_headline     'Welcome to RateONE Guest WiFi'
+	option ad_subtext      'Enjoy 1 hour free WiFi — sponsored by'
+	option ad_image_url    ''
+	option ad_by           'RateONE'
+	option whatsapp_number '60123456789'
+	option whatsapp_label 'Chat with Us on WhatsApp'
+	option countdown_secs  '10'
+	option session_dur    '60'
+
+config allowed
+	option remote '0.0.0.0/0'

@@ -1,0 +1,12 @@
+config nodogsplash
+  option enabled          '1'
+  option gatewayinterface 'br-lan'
+  option gatewayname      'FreeWiFi'
+  option gatewayaddress   '192.168.10.1'
+  option maxclients       '100'
+  option debuglevel       '1'
+  option authenticateimmediately '1'
+  option clientidletimeout  '600'
+  option clientforcetimeout '3600'
+  # Dynamic CGI landing page (configurable via LuCI → Services → Hotspot Landing)
+  option redirecturl 'http://192.168.10.1/cgi-bin/splash.cgi'
